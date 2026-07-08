@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الموقع الشخصي لمحمد يعقوب درويش - مهتم بالشأن التجاري، وتطوير قطاع الأعمال.">
+    <title>محمد يعقوب درويش | الشأن التجاري والأعمال</title>
+    <!-- خطوط جوجل (تاجوال) -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- المتغيرات والألوان (طابع رسمي واحترافي) --- */
+        :root {
+            --primary-color: #1a365d; /* أزرق داكن رسمي */
+            --secondary-color: #2b6cb0; /* أزرق فاتح قليلاً للروابط */
+            --accent-color: #d69e2e; /* لون ذهبي للتميز */
+            --text-dark: #1a202c;
+            --text-light: #718096;
+            --bg-main: #ffffff;
+            --bg-alt: #f7fafc;
+            --font-main: 'Tajawal', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background-color: var(--bg-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- شريط التنقل --- */
+        .navbar {
+            background-color: transparent;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 1.5rem 0;
+        }
+
+        .navbar.scrolled {
+            background-color: var(--bg-main);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* زر القائمة للجوال */
+        .menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+        }
+
+        /* --- القسم الرئيسي (Hero) --- */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(247,250,252,0.9) 0%, rgba(237,242,247,0.9) 100%), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-content h2 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* --- الأقسام العامة --- */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .bg-alt {
+            background-color: var(--bg-alt);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 0.8rem auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* --- من أنا --- */
+        .about-flex {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-img {
+            flex: 1;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .about-text {
+            flex: 1;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- الاهتمامات والمجالات --- */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* --- المقالات --- */
+        .article-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .article-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 2rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .article-body h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-body p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- التذييل --- */
+        .footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer h2 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            color: #94a3b8 !important;
+        }
+
+        /* --- تأثيرات الجافا سكريبت (الأنيميشن) --- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- التصميم المتجاوب (للموبايل) --- */
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-main);
+                flex-direction: column;
+                gap: 0;
+                text-align: center;
+                box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+            .nav-links.active {
+                max-height: 300px;
+            }
+            .nav-links li {
+                padding: 1rem 0;
+                border-bottom: 1px solid #eee;
+            }
+            .about-flex {
+                flex-direction: column;
+            }
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">محمد يعقوب<span>.</span></h1>
+            <button class="menu-btn" id="menu-btn">☰</button>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#about">عن الكاتب</a></li>
+                    <li><a href="#interests">الاهتمامات</a></li>
+                    <li><a href="#articles">المقالات</a></li>
+                    <li><a href="#contact">تواصل</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- الواجهة الرئيسية -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content fade-in">
+            <h2>رؤية اقتصادية،<br>وبيئة تجارية مستدامة.</h2>
+            <p>محمد يعقوب درويش - موظف في وزارة التجارة بالمنطقة الشرقية. كاتب ومحلل مهتم بتطوير قطاع الأعمال، ونشر الوعي بالأنظمة والتشريعات التجارية في المملكة.</p>
+            <a href="#articles" class="btn btn-primary">تصفح المقالات</a>
+        </div>
+    </section>
+
+    <!-- نبذة شخصية -->
+    <section id="about" class="section">
+        <div class="container about-flex fade-in">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=1932&auto=format&fit=crop" alt="بيئة عمل تجارية" class="about-img">
+            <div class="about-text">
+                <h2 class="section-title" style="text-align: right;">من أنا</h2>
+                <p>أعمل ضمن الكوادر الوطنية في <strong>وزارة التجارة بالمنطقة الشرقية</strong>، وأسعى من خلال عملي إلى تسهيل الإجراءات التجارية وتعزيز البيئة الاستثمارية لتتوافق مع رؤية المملكة 2030.</p>
+                <p>إلى جانب عملي الرسمي، أجد شغفاً كبيراً في تدوين وكتابة المقالات التي تسلط الضوء على الفرص الاستثمارية، وتحليل أثر القرارات التجارية على السوق المحلي، بهدف رفع الوعي لدى رواد الأعمال والمستثمرين.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- الاهتمامات -->
+    <section id="interests" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">مجالات الاهتمام</h2>
+            <div class="grid-3 fade-in">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>الأنظمة التجارية</h3>
+                    <p>تحليل وتوضيح اللوائح والأنظمة الصادرة عن الجهات الحكومية وأثرها على سهولة ممارسة الأعمال.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>ريادة الأعمال</h3>
+                    <p>تقديم النصائح والإضاءات للمشاريع الناشئة والمتوسطة لضمان استدامتها ونموها في السوق.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✍️</div>
+                    <h3>الكتابة المتخصصة</h3>
+                    <p>نشر مقالات دورية تستعرض وتحلل التغيرات الاقتصادية وحركة التجارة في المنطقة الشرقية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المقالات -->
+    <section id="articles" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">أحدث المقالات</h2>
+            <div class="grid-3 fade-in">
+                <!-- مقال 1 -->
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="مقال تجاري" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>التجارة الإلكترونية</span>
+                            <span>يوليو 2026</span>
+                        </div>
+                        <h3>مستقبل التجارة الإلكترونية في ظل الأنظمة الجديدة</h3>
+                        <p>قراءة في أبرز التحديثات التنظيمية وكيف يمكن للمتاجر الإلكترونية الاستفادة منها لتوسيع نطاق أعمالها بأمان.</p>
+                        <a href="#" class="read-more">قراءة المقال &larr;</a>
+                    </div>
+                </article>
+
+                <!-- مقال 2 -->
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop" alt="اجتماع أعمال" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>تطوير الأعمال</span>
+                            <span>يونيو 2026</span>
+                        </div>
+                        <h3>كيف تستفيد الشركات الناشئة من التسهيلات الحكومية؟</h3>
+                        <p>دليل مبسط لرواد الأعمال يوضح مسارات الدعم والتسهيلات المقدمة من وزارة التجارة والجهات ذات العلاقة.</p>
+                        <a href="#" class="read-more">قراءة المقال &larr;</a>
+                    </div>
+                </article>
+
+                <!-- مقال 3 -->
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="تحليل بيانات" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>اقتصاد السوق</span>
+                            <span>مايو 2026</span>
+                        </div>
+                        <h3>المنطقة الشرقية: بوابة الاستثمار والتجارة</h3>
+                        <p>تحليل لأهم القطاعات الواعدة في المنطقة الشرقية بناءً على المؤشرات الاقتصادية وحجم الحركة التجارية.</p>
+                        <a href="#" class="read-more">قراءة المقال &larr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2>لنتبادل الآراء</h2>
+            <p>يسعدني تواصلكم للنقاش حول الأنظمة التجارية أو استشارات تطوير الأعمال.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn (لينكد إن)</a>
+                <a href="#">X (تويتر)</a>
+                <a href="#">البريد الإلكتروني</a>
+            </div>
+            <p class="copyright">&copy; 2026 محمد يعقوب درويش. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- أكواد جافا سكريبت (JavaScript) -->
+    <script>
+        // 1. تغيير خلفية القائمة العلوية عند التمرير للأسفل
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 2. تفعيل زر القائمة في الجوال
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // إغلاق القائمة عند النقر على أي رابط في الجوال
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // 3. تأثير الظهور السلس للعناصر عند التمرير (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.2, // يظهر العنصر عندما يظهر 20% منه في الشاشة
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    // إيقاف المراقبة بعد الظهور الأول لعدم تكرار التأثير
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
