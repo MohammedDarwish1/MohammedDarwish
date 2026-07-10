@@ -272,6 +272,41 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important; /* ظل احترافي يفصل القائمة عن المحتوى الأبيض */
         border-bottom: 1px solid rgba(212, 175, 55, 0.15) !important; /* خط ذهبي خفيف جداً في أسفل القائمة */
     }
+
+
+    /* ================= تحسين الواجهة وتناسقها مع شاشات الجوال ================= */
+    @media (max-width: 768px) {
+        .hero-section {
+            padding-top: 120px !important; /* إضافة مسافة علوية لإبعاد النص عن القائمة */
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+        
+        .hero-badge {
+            font-size: 0.85rem !important;
+            margin-bottom: 1rem;
+            padding: 6px 15px;
+        }
+
+        .hero-title {
+            font-size: 2rem !important; /* تصغير العنوان الرئيسي ليناسب الجوال */
+            line-height: 1.4 !important;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1rem !important; /* تصغير حجم خط الوصف */
+            line-height: 1.8 !important;
+            padding: 0 10px; /* إضافة هوامش جانبية مريحة للعين */
+            text-align: justify; /* ضبط النص ليكون مرتباً كالمقالات */
+            text-align-last: center;
+        }
+
+        .hero-divider {
+            margin: 1.5rem auto !important; /* تقليل المسافة حول الخط الفاصل */
+        }
+    }
+    
     </style>
 </head>
 <body>
