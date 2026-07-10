@@ -239,6 +239,33 @@
             .about-flex { flex-direction: column; }
             .nav-links { display: none; }
         }
+
+
+
+        /* ================= تعديل ألوان القائمة العلوية لتناسب الخلفية الغامقة ================= */
+    header a, 
+    .logo, 
+    .nav-link,
+    nav a {
+        color: #FFFFFF !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* إضافة ظل خفيف لزيادة الوضوح */
+        transition: color 0.3s ease;
+    }
+
+    header a:hover, 
+    .nav-link:hover,
+    nav a:hover {
+        color: #D4AF37 !important; /* يتغير للذهبي عند التمرير عليه */
+    }
+
+
+    /* ================= توحيد لون خلفية القائمة العلوية (الهيدر) ================= */
+    header, 
+    .navbar {
+        background-color: #07172A !important; /* لون كحلي فخم ومتناسق مع الواجهة */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important; /* ظل احترافي يفصل القائمة عن المحتوى الأبيض */
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15) !important; /* خط ذهبي خفيف جداً في أسفل القائمة */
+    }
     </style>
 </head>
 <body>
@@ -254,14 +281,148 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero-content reveal">
-            <!-- تم تعديل النص ليتطابق مع الصورة المرفقة -->
-            <h1>رؤية اقتصادية،<br>وبيئة تجارية مستدامة.</h1>
-            <p>محمد يعقوب درويش - موظف في وزارة التجارة بالمنطقة الشرقية. كاتب ومحلل مهتم بتطوير قطاع الأعمال، ونشر الوعي بالأنظمة والتشريعات التجارية في المملكة.</p>
-            <a href="#articles" class="btn-dark">تصفح المقالات</a>
-        </div>
-    </section>
+    <style>
+    /* ================= تنسيقات الواجهة الرئيسية (Hero Section) الفخمة ================= */
+    .hero-section {
+        position: relative;
+        background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'); /* يمكنك تغيير الرابط بصورتك */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* تأثير التمرير الفخم (Parallax) */
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+
+    /* طبقة التعتيم الفاخرة فوق الصورة */
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(7, 23, 42, 0.95) 0%, rgba(15, 41, 77, 0.85) 100%);
+        z-index: 1;
+    }
+
+    /* حاوية المحتوى */
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 950px;
+        animation: fadeUp 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    /* شارة علوية أنيقة */
+    .hero-badge {
+        display: inline-block;
+        color: #D4AF37; /* اللون الذهبي */
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        padding: 8px 25px;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        border-radius: 50px;
+        background: rgba(212, 175, 55, 0.05);
+        backdrop-filter: blur(5px);
+    }
+
+    /* العنوان الرئيسي */
+    .hero-title {
+        color: #FFFFFF;
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-title span {
+        color: #D4AF37; /* تمييز كلمة باللون الذهبي */
+    }
+
+    /* الوصف الاحترافي */
+    .hero-subtitle {
+        color: #E2E8F0;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 2.2;
+        margin: 0 auto;
+        max-width: 850px;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle strong {
+        color: #FFFFFF;
+        font-weight: 700;
+    }
+
+    /* خط فاصل أنيق */
+    .hero-divider {
+        width: 120px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        margin: 2.5rem auto;
+        border-radius: 5px;
+    }
+
+    /* تأثيرات الحركة */
+    @keyframes fadeUp {
+        0% {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* التجاوب مع شاشات الجوال */
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 2.2rem;
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+        .hero-badge {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<!-- ================= قسم الواجهة الرئيسية ================= -->
+<section class="hero-section">
+    <div class="hero-content">
+        
+        <!-- الشارة العلوية -->
+        <div class="hero-badge">رؤية مؤسسية • كفاءة • جودة</div>
+
+        <!-- العنوان الرئيسي -->
+        <h1 class="hero-title">
+            الارتقاء بقطاع الأعمال<br>وهندسة <span>تجربة المستفيد</span>
+        </h1>
+
+        <div class="hero-divider"></div>
+
+        <!-- الوصف الاحترافي (المُعاد صياغته) -->
+        <p class="hero-subtitle">
+            <strong>محمد يعقوب درويش</strong> | متخصص في تطوير قطاع الأعمال وخدمة العملاء بوزارة التجارة. أمتلك رصيداً واسعاً من الخبرة في دعم السجلات التجارية وخدمات الشركات، وأكرس جهدي لصياغة الأدلة الإجرائية والتعاميم المؤسسية؛ سعياً لرفع كفاءة الأداء، وتطوير جودة الخدمات، ونشر المعرفة المهنية الموثوقة لقطاع الأعمال.
+        </p>
+
+    </div>
+</section>
 
     <!-- قسم من أنا (النص يميناً والصورة يساراً) -->
     <section id="about" class="section">
@@ -279,28 +440,183 @@
         </div>
     </section>
 
-    <section id="expertise" class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title reveal">مجالات الاهتمام والخبرة</h2>
-            <div class="interests-grid">
-                <div class="interest-card reveal">
-                    <div class="icon-circle">⚖️</div>
-                    <h3>الأنظمة واللوائح</h3>
-                    <p>تحليل وتوضيح اللوائح الصادرة عن الجهات الحكومية وأثرها المباشر على سهولة ونمو ممارسة الأعمال.</p>
+   <style>
+    /* ================= تنسيقات قسم الخبرات (الاحترافية) ================= */
+    .expertise-section {
+        background-color: #07172A; /* لون الخلفية الكحلي الملكي */
+        padding: 6rem 0;
+        position: relative;
+    }
+
+    .expertise-section .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #FFFFFF;
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
+    /* الخط الذهبي تحت العنوان */
+    .expertise-section .section-title::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #D4AF37; 
+        margin: 15px auto 0;
+        border-radius: 4px;
+    }
+
+    /* شبكة البطاقات (تتجاوب تلقائياً مع الجوال والشاشة الكبيرة) */
+    .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+        padding: 0 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* تصميم البطاقة نفسها */
+    .expertise-card {
+        background: linear-gradient(145deg, #0a1f3d, #07172A);
+        border: 1px solid rgba(212, 175, 55, 0.15); /* إطار ذهبي خفيف جداً */
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* تأثير اللمعة العلوية للبطاقة */
+    .expertise-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    /* تأثيرات عند تمرير الماوس (Hover) */
+    .expertise-card:hover {
+        transform: translateY(-12px);
+        border-color: rgba(212, 175, 55, 0.6);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(145deg, #0d2850, #0a1f3d);
+    }
+
+    .expertise-card:hover::before {
+        opacity: 1;
+    }
+
+    /* دائرة الأيقونة */
+    .icon-wrapper {
+        width: 85px;
+        height: 85px;
+        background: rgba(212, 175, 55, 0.05);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.8rem;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        color: #D4AF37;
+        transition: all 0.4s ease;
+        box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.05);
+    }
+
+    .expertise-card:hover .icon-wrapper {
+        background: #D4AF37;
+        color: #07172A; /* يتغير لون الأيقونة للكحلي */
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .icon-wrapper svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* نصوص البطاقة */
+    .expertise-title {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: #FFFFFF;
+        line-height: 1.4;
+    }
+
+    .expertise-desc {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #94A3B8; /* لون رمادي مزرق مريح للقراءة */
+        margin: 0;
+    }
+</style>
+
+<!-- ================= قسم مجالات الاهتمام والخبرة ================= -->
+<section id="expertise" class="expertise-section">
+    <div class="container">
+        <h2 class="section-title reveal">مجالات الاهتمام والخبرة</h2>
+        
+        <div class="expertise-grid">
+            
+            <!-- البطاقة الأولى: خدمة العملاء -->
+            <div class="expertise-card reveal">
+                <div class="icon-wrapper">
+                    <!-- أيقونة احترافية بصيغة SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
                 </div>
-                <div class="interest-card reveal" style="transition-delay: 0.1s;">
-                    <div class="icon-circle">🚀</div>
-                    <h3>ريادة الأعمال</h3>
-                    <p>تقديم إضاءات للمشاريع الناشئة والمتوسطة لتفادي المخالفات وضمان استدامتها في السوق المحلي.</p>
-                </div>
-                <div class="interest-card reveal" style="transition-delay: 0.2s;">
-                    <div class="icon-circle">📊</div>
-                    <h3>التحليل الاقتصادي</h3>
-                    <p>نشر مقالات دورية تستعرض التغيرات الاقتصادية وحركة التجارة والفرص في المنطقة الشرقية.</p>
-                </div>
+                <h3 class="expertise-title">تجربة المستفيد وخدمة العملاء</h3>
+                <p class="expertise-desc">تقديم الدعم المتخصص لخدمات السجل التجاري والشركات في وزارة التجارة، والعمل المستمر على تحسين رحلة وتجربة المستفيدين.</p>
             </div>
+
+            <!-- البطاقة الثانية: الأدلة الإجرائية -->
+            <div class="expertise-card reveal">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+                <h3 class="expertise-title">الأدلة الإجرائية والتعاميم</h3>
+                <p class="expertise-desc">إعداد وتطوير الأدلة الإجرائية والتعاميم الداخلية لضمان سير العمل بوضوح وكفاءة، وتوحيد المعايير لخدمة قطاع الأعمال.</p>
+            </div>
+
+            <!-- البطاقة الثالثة: المعرفة والجودة -->
+            <div class="expertise-card reveal">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18h6"></path>
+                        <path d="M10 22h4"></path>
+                        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .34 2.02 1.5 3.5.76.75 1.23 1.51 1.4 2.5"></path>
+                    </svg>
+                </div>
+                <h3 class="expertise-title">جودة الخدمات ونشر المعرفة</h3>
+                <p class="expertise-desc">تصميم المحتوى التوعوي والمقالات المهنية للمساهمة في تطوير جودة الخدمات ونشر المعرفة المهنية لقطاع الأعمال.</p>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- قسم المقالات (تم تعديله ليعرض مقالاً واحداً بالمنتصف) -->
     <section id="articles" class="section">
@@ -314,7 +630,7 @@
                 <a href="article.html" class="article-card reveal" style="max-width: 450px; width: 100%;">
                     <div class="article-img-wrapper">
                         <!-- صورة احترافية تعبر عن خدمة العملاء والعمل المكتبي -->
-                        <img src="p1.jpg" class="article-img" alt="خدمة العملاء">
+                        <img src="p2.jpeg" class="article-img" alt="خدمة العملاء">
                     </div>
                     <div class="article-title">أهمية خدمة العملاء في تعزيز جودة الخدمات الحكومية</div>
                 </a>
