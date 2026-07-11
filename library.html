@@ -130,6 +130,132 @@
             .page-header h1 { font-size: 2.5rem; }
             .empty-state-box { padding: 50px 20px; margin-bottom: 80px; }
         }
+
+        /* ================= الفوتر (تذييل الصفحة) ================= */
+.site-footer {
+    background: rgba(4, 15, 33, 0.8);
+    border-top: 1px solid var(--glass-border);
+    padding: 50px 0 20px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-info, .footer-disclaimer {
+    flex: 1;
+}
+
+.site-footer h4 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.site-footer p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.footer-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    direction: ltr;
+}
+
+.footer-email:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px dashed rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+}
+
+/* تجاوب الفوتر مع الجوال */
+@media (max-width: 992px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .site-footer {
+        padding-bottom: 90px; /* لترك مساحة للشريط السفلي الثابت في الجوال */
+    }
+}
+
+/* ================= تصميم شبكة الملفات ================= */
+.files-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 80px; 
+    position: relative; 
+    z-index: 5;
+}
+.file-card {
+    background: var(--glass-bg); 
+    backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border); 
+    border-radius: var(--radius); 
+    padding: 40px 25px;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    transition: var(--transition); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.file-card:hover {
+    border-color: rgba(229, 184, 66, 0.4); 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+.file-icon {
+    font-size: 3rem; 
+    color: var(--gold); 
+    margin-bottom: 20px; 
+    background: rgba(229, 184, 66, 0.1);
+    width: 80px; 
+    height: 80px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%;
+}
+.file-card h3 { font-size: 1.3rem; margin-bottom: 10px; line-height: 1.4; }
+.file-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
+.btn-download {
+    background: transparent; color: var(--gold); border: 1px solid var(--gold);
+    padding: 12px 20px; border-radius: 8px; font-weight: 700; width: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    transition: var(--transition); cursor: pointer;
+}
+.btn-download:hover { background: var(--gold); color: #000; }
+
+/* للموبايل فقط */
+@media (max-width: 992px) {
+    .files-grid { grid-template-columns: 1fr; gap: 20px; }
+}
     </style>
 </head>
 <body>
@@ -162,21 +288,32 @@
     <!-- محتوى المكتبة -->
     <main class="container">
         <div class="page-header">
-            <h1>المكتبة الرقمية</h1>
-            <p>مساحة مخصصة لتحميل النماذج، والملفات، والمراجع المهنية</p>
-        </div>
+    <h1>المكتبة المعرفية</h1>
+    <p>مجموعة من الأنظمة المتخصصة الجاهزة للقراءة والتحميل المباشر.</p>
+</div>
 
-        <!-- الهيكل جاهز لاستقبال الملفات مستقبلاً -->
-        <div class="library-grid">
-            
-            <!-- رسالة "قيد التجهيز" (يمكنك حذفها لاحقاً عند إضافة الملفات) -->
-            <div class="empty-state-box">
-                <i class="fa-solid fa-folder-open"></i>
-                <h3>المكتبة قيد التجهيز</h3>
-                <p>سيتم إدراج النماذج والملفات المهنية هنا قريباً لخدمتكم بشكل أفضل.</p>
-            </div>
+<div class="files-grid">
+    <div class="file-card">
+        <div class="file-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h3>نظام الشركات</h3>
+        <p>وصف موجز يوضح محتوى هذا النظام والفائدة المرجوة منه.</p>
+        <a href="System1.pdf" target="_blank" class="btn-download">قراءة الملف <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
 
-        </div>
+    <div class="file-card">
+        <div class="file-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h3>نظام الأسماء التجارية</h3>
+        <p>وصف موجز يوضح محتوى هذا النظام والفائدة المرجوة منه.</p>
+        <a href="System2.pdf" target="_blank" class="btn-download">قراءة الملف <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+
+    <div class="file-card">
+        <div class="file-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h3>نظام السجل التجاري</h3>
+        <p>وصف موجز يوضح محتوى هذا النظام والفائدة المرجوة منه.</p>
+        <a href="System3.pdf" target="_blank" class="btn-download">قراءة الملف <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+</div>
     </main>
 
     <!-- الشريط السفلي للجوال -->
@@ -191,5 +328,32 @@
         </ul>
     </nav>
 
+
+    <!-- ================= الفوتر (تذييل الصفحة) ================= -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            
+            <!-- قسم التواصل -->
+            <div class="footer-info">
+                <h4>تواصل معي</h4>
+                <p>يسعدني تواصلك عبر البريد الإلكتروني لأي استفسارات أو لتبادل الخبرات المهنية:</p>
+                <a href="mailto:your-email@example.com" class="footer-email">
+                    <i class="fa-regular fa-envelope"></i> your-email@example.com
+                </a>
+            </div>
+
+            <!-- قسم إخلاء المسؤولية -->
+            <div class="footer-disclaimer">
+                <h4>إخلاء مسؤولية</h4>
+                <p>جميع المقالات، الأدلة، والآراء المطروحة في هذا الموقع تعبر عن رأيي الشخصي واجتهادي الخاص، ولا تمثل أو تعكس بالضرورة سياسات أو توجهات جهة العمل أو أي جهة حكومية أو رسمية أرتبط بها.</p>
+            </div>
+
+        </div>
+
+        
+    </footer>
+
+
+    
 </body>
 </html>

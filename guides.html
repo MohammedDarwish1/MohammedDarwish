@@ -3,187 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>الأدلة | محمد درويش</title>
+    <title>الأدلة الإجرائية | محمد درويش</title>
     
-    <!-- الخطوط من جوجل -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- مكتبة الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* ================= المتغيرات والألوان ================= */
         :root {
-            --bg-color: #020b16;
-            --glass-bg: rgba(6, 21, 46, 0.65);
-            --glass-border: rgba(255, 255, 255, 0.06);
-            --gold: #e5b842;
-            --gold-hover: #f1c757;
-            --green: #07463d;
-            --green-hover: #0a5c50;
-            --text-main: #ffffff;
-            --text-muted: #94a3b8;
-            --radius: 16px;
-            --transition: 0.3s ease;
+            --bg-color: #020b16; --glass-bg: rgba(6, 21, 46, 0.65); --glass-border: rgba(255, 255, 255, 0.06);
+            --gold: #e5b842; --gold-hover: #f1c757; --green: #07463d; --green-hover: #0a5c50;
+            --text-main: #ffffff; --text-muted: #94a3b8; --radius: 16px; --transition: 0.3s ease;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* --- خلفية الموقع (ثابتة ومتلاشية) --- */
-        body::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 90vh; 
-            z-index: -2; background-image: url('city.png'); background-size: cover; background-position: center top;
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
-        }
-        body::after {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 90vh; z-index: -1;
-            background: linear-gradient(to bottom, rgba(2, 11, 22, 0.3) 0%, var(--bg-color) 100%);
-        }
-
+        body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; position: relative; }
+        body::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 90vh; z-index: -2; background-image: url('city.png'); background-size: cover; background-position: center center; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); }
+        body::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 90vh; z-index: -1; background: linear-gradient(to bottom, rgba(2, 11, 22, 0.3) 0%, var(--bg-color) 100%); }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 4%; }
         a { text-decoration: none; color: inherit; }
 
-        /* ================= القائمة العلوية ================= */
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 25px 4%; position: relative; z-index: 1000;
-        }
+        /* القائمة العلوية */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 25px 4%; position: relative; z-index: 1000; }
         .logo { display: flex; align-items: center; gap: 12px; }
-        .logo-icon {
-            font-size: 2.5rem; font-weight: 900;
-            background: linear-gradient(135deg, #fff 0%, #6fb6ad 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2px;
-        }
+        .logo-icon { font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #fff 0%, #6fb6ad 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2px; }
         .logo-text h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: -3px; }
         .logo-text p { font-size: 0.65rem; color: var(--gold); letter-spacing: 1px; }
-
         .nav-links { display: flex; gap: 30px; }
         .nav-links a { font-size: 1.05rem; font-weight: 500; transition: var(--transition); position: relative; }
         .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-        .nav-links a.active::after {
-            content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--gold);
-        }
-
+        .nav-links a.active::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--gold); }
         .header-actions { display: flex; align-items: center; gap: 20px; }
-        .search-icon { font-size: 1.2rem; cursor: pointer; transition: var(--transition); }
-        .search-icon:hover { color: var(--gold); }
-        .btn-green {
-            background: var(--green); color: var(--text-main);
-            padding: 10px 24px; border-radius: 8px; font-weight: 500;
-            display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.05);
-            transition: var(--transition); cursor: pointer;
-        }
+        .btn-green { background: var(--green); color: var(--text-main); padding: 10px 24px; border-radius: 8px; font-weight: 500; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); cursor: pointer; }
         .btn-green:hover { background: var(--green-hover); }
 
-        /* ================= تصميم صفحة الأدلة ================= */
+        /* تصميم البطاقات والملفات */
         .page-header { text-align: center; margin: 40px 0 60px; position: relative; z-index: 5; }
         .page-header h1 { font-size: 3rem; font-weight: 900; color: var(--text-main); margin-bottom: 15px; }
         .page-header p { font-size: 1.2rem; color: var(--text-muted); }
 
-        /* الشبكة جاهزة مستقبلاً للأدلة */
-        .guides-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 50px;
-            position: relative; z-index: 5;
+        .files-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+            margin-bottom: 80px; position: relative; z-index: 5;
         }
-
-        /* رسالة "قيد التجهيز" */
-        .empty-state-box {
-            grid-column: 1 / -1; 
+        .file-card {
             background: var(--glass-bg); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-            border: 1px dashed var(--gold); border-radius: var(--radius);
-            padding: 80px 20px; text-align: center;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            margin-bottom: 100px;
+            border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 40px 25px;
+            text-align: center; display: flex; flex-direction: column; align-items: center;
+            transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .empty-state-box i { font-size: 3.5rem; color: rgba(229, 184, 66, 0.5); margin-bottom: 20px; }
-        .empty-state-box h3 { font-size: 1.8rem; margin-bottom: 10px; color: var(--text-main); }
-        .empty-state-box p { font-size: 1.1rem; color: var(--text-muted); }
+        .file-card:hover {
+            border-color: rgba(229, 184, 66, 0.4); transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .file-icon {
+            font-size: 3rem; color: var(--gold); margin-bottom: 20px; background: rgba(229, 184, 66, 0.1);
+            width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%;
+        }
+        .file-card h3 { font-size: 1.3rem; color: var(--text-main); margin-bottom: 10px; line-height: 1.4; }
+        .file-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
+        
+        .btn-download {
+            background: transparent; color: var(--gold); border: 1px solid var(--gold);
+            padding: 12px 20px; border-radius: 8px; font-weight: 700; width: 100%;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            transition: var(--transition); cursor: pointer;
+        }
+        .btn-download:hover { background: var(--gold); color: #000; }
 
-        /* ================= الشريط السفلي للجوال ================= */
-        .mobile-bottom-nav {
-            display: none; position: fixed; bottom: 0; width: 100%;
-            background: rgba(4, 15, 33, 0.95); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border);
-            z-index: 2000; padding: 12px 0; padding-bottom: calc(12px + env(safe-area-inset-bottom));
-        }
+        /* ================= الفوتر (تذييل الصفحة) ================= */
+        .site-footer { background: rgba(4, 15, 33, 0.8); border-top: 1px solid var(--glass-border); padding: 50px 0 20px; margin-top: 60px; position: relative; z-index: 10; }
+        .footer-content { display: flex; justify-content: space-between; gap: 40px; margin-bottom: 30px; }
+        .footer-info, .footer-disclaimer { flex: 1; }
+        .site-footer h4 { color: var(--gold); font-size: 1.2rem; margin-bottom: 15px; }
+        .site-footer p { color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; margin-bottom: 15px; }
+        .footer-email { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.05); padding: 10px 20px; border-radius: 8px; color: var(--text-main); border: 1px solid rgba(255, 255, 255, 0.1); transition: var(--transition); direction: ltr; }
+        .footer-email:hover { border-color: var(--gold); color: var(--gold); }
+        .footer-bottom { text-align: center; border-top: 1px dashed rgba(255, 255, 255, 0.05); padding-top: 20px; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
+
+        /* الموبايل */
+        .mobile-bottom-nav { display: none; position: fixed; bottom: 0; width: 100%; background: rgba(4, 15, 33, 0.95); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); z-index: 2000; padding: 12px 0; padding-bottom: calc(12px + env(safe-area-inset-bottom)); }
         .mobile-bottom-nav ul { display: flex; justify-content: space-around; list-style: none; direction: ltr; padding: 0; }
         .mobile-bottom-nav a { display: flex; flex-direction: column; align-items: center; color: var(--text-muted); font-size: 0.75rem; gap: 6px; font-weight: 500; }
         .mobile-bottom-nav a.active { color: var(--gold); }
         .mobile-bottom-nav a i { font-size: 1.3rem; }
 
-        /* ================= التجاوب مع الجوال ================= */
         @media (max-width: 992px) {
             header .nav-links, header .btn-green { display: none; }
             .mobile-bottom-nav { display: block; }
             .page-header h1 { font-size: 2.5rem; }
-            .empty-state-box { padding: 50px 20px; margin-bottom: 80px; }
+            .files-grid { grid-template-columns: 1fr; gap: 20px; }
+            .footer-content { flex-direction: column; gap: 30px; text-align: center; }
+            .site-footer { padding-bottom: 90px; }
         }
+
+        /* ================= تصميم شبكة الملفات ================= */
+.files-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 80px; 
+    position: relative; 
+    z-index: 5;
+}
+.file-card {
+    background: var(--glass-bg); 
+    backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border); 
+    border-radius: var(--radius); 
+    padding: 40px 25px;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    transition: var(--transition); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.file-card:hover {
+    border-color: rgba(229, 184, 66, 0.4); 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+.file-icon {
+    font-size: 3rem; 
+    color: var(--gold); 
+    margin-bottom: 20px; 
+    background: rgba(229, 184, 66, 0.1);
+    width: 80px; 
+    height: 80px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%;
+}
+.file-card h3 { font-size: 1.3rem; margin-bottom: 10px; line-height: 1.4; }
+.file-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
+.btn-download {
+    background: transparent; color: var(--gold); border: 1px solid var(--gold);
+    padding: 12px 20px; border-radius: 8px; font-weight: 700; width: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    transition: var(--transition); cursor: pointer;
+}
+.btn-download:hover { background: var(--gold); color: #000; }
+
+/* للموبايل فقط */
+@media (max-width: 992px) {
+    .files-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
     </style>
 </head>
 <body>
 
-    <!-- القائمة العلوية -->
     <header class="container">
         <a href="index.html" class="logo">
             <div class="logo-icon">MD</div>
-            <div class="logo-text" style="text-align: right;">
-                <h2>محمد درويش</h2>
-                <p>MOHAMMED DARWISH</p>
-            </div>
+            <div class="logo-text" style="text-align: right;"><h2>محمد درويش</h2><p>MOHAMMED DARWISH</p></div>
         </a>
-
         <nav class="nav-links">
             <a href="index.html">الرئيسية</a>
             <a href="article.html">المقالات</a>
             <a href="library.html">المكتبة</a>
-            <!-- تم نقل المؤشر هنا ليدل على صفحة الأدلة -->
             <a href="guides.html" class="active">الأدلة</a>
             <a href="faq.html">الأسئلة الشائعة</a>
         </nav>
-
         <div class="header-actions">
             <a href="contact.html" class="btn-green"><i class="fa-regular fa-user"></i> تواصل معي</a>
-            
         </div>
     </header>
 
-    <!-- محتوى الأدلة -->
     <main class="container">
         <div class="page-header">
-            <h1>الأدلة الإجرائية</h1>
-            <p>دليلك الشامل ومراجعك خطوة بخطوة لإنجاز الأعمال بدقة واحترافية</p>
-        </div>
+    <h1>الأدلة واللوائح</h1>
+    <p>مجموعة من اللوائح الإجرائية الجاهزة للقراءة والتحميل المباشر.</p>
+</div>
 
-        <!-- الهيكل جاهز لاستقبال الأدلة مستقبلاً -->
-        <div class="guides-grid">
-            
-            <!-- رسالة "قيد التجهيز" -->
-            <div class="empty-state-box">
-                <i class="fa-solid fa-clipboard-check"></i>
-                <h3>الأدلة قيد التجهيز</h3>
-                <p>سيتم إضافة الأدلة الإجرائية والشروحات التفصيلية هنا قريباً.</p>
-            </div>
+<div class="files-grid">
+    <div class="file-card">
+        <div class="file-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h3>اللائحة التنفيذية لنظام الشركات</h3>
+        <p>وصف موجز يوضح محتوى هذه اللائحة والفائدة المرجوة منها.</p>
+        <a href="Regulation1.pdf" target="_blank" class="btn-download">قراءة الملف <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
 
-        </div>
+    <div class="file-card">
+        <div class="file-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h3>اللائحة التنفيذية لنظام السجل التجاري</h3>
+        <p>وصف موجز يوضح محتوى هذه اللائحة والفائدة المرجوة منها.</p>
+        <a href="Regulation2.pdf" target="_blank" class="btn-download">قراءة الملف <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+
+    <div class="file-card">
+        <div class="file-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h3>اللائحة التنفيذية لنظام ألاسماء التجارية</h3>
+        <p>وصف موجز يوضح محتوى هذه اللائحة والفائدة المرجوة منها.</p>
+        <a href="Regulation3.pdf" target="_blank" class="btn-download">قراءة الملف <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+</div>
     </main>
 
-    <!-- الشريط السفلي للجوال -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4>تواصل معي</h4>
+                <p>يسعدني تواصلك عبر البريد الإلكتروني لأي استفسارات أو لتبادل الخبرات المهنية:</p>
+                <a href="mailto:your-email@example.com" class="footer-email">
+                    <i class="fa-regular fa-envelope"></i> your-email@example.com
+                </a>
+            </div>
+            <div class="footer-disclaimer">
+                <h4>إخلاء مسؤولية</h4>
+                <p>جميع المقالات، الأدلة، والآراء المطروحة في هذا الموقع تعبر عن رأيي الشخصي واجتهادي الخاص، ولا تمثل أو تعكس بالضرورة سياسات أو توجهات جهة العمل أو أي جهة حكومية أو رسمية أرتبط بها.</p>
+            </div>
+        </div>
+        
+    </footer>
+
     <nav class="mobile-bottom-nav">
         <ul style="direction: ltr; padding: 0;">
             <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i>الأسئلة الشائعة</a></li>
-            <!-- تم نقل المؤشر هنا ليدل على صفحة الأدلة في الجوال -->
             <li><a href="guides.html" class="active"><i class="fa-solid fa-clipboard-list"></i>الأدلة</a></li>
             <li><a href="library.html"><i class="fa-solid fa-book"></i>المكتبة</a></li>
             <li><a href="article.html"><i class="fa-regular fa-file-lines"></i>المقالات</a></li>

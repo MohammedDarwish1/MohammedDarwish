@@ -291,6 +291,79 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+/* ================= الفوتر (تذييل الصفحة) ================= */
+.site-footer {
+    background: rgba(4, 15, 33, 0.8);
+    border-top: 1px solid var(--glass-border);
+    padding: 50px 0 20px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-info, .footer-disclaimer {
+    flex: 1;
+}
+
+.site-footer h4 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.site-footer p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.footer-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    direction: ltr;
+}
+
+.footer-email:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px dashed rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+}
+
+/* تجاوب الفوتر مع الجوال */
+@media (max-width: 992px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .site-footer {
+        padding-bottom: 90px; /* لترك مساحة للشريط السفلي الثابت في الجوال */
+    }
+}
     
     </style>
 </head>
@@ -541,5 +614,31 @@ html {
             setTimeout(updateCount, 800);
         });
     </script>
+
+
+
+<!-- ================= الفوتر (تذييل الصفحة) ================= -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            
+            <!-- قسم التواصل -->
+            <div class="footer-info">
+                <h4>تواصل معي</h4>
+                <p>يسعدني تواصلك عبر البريد الإلكتروني لأي استفسارات أو لتبادل الخبرات المهنية:</p>
+                <a href="mailto:your-email@example.com" class="footer-email">
+                    <i class="fa-regular fa-envelope"></i> your-email@example.com
+                </a>
+            </div>
+
+            <!-- قسم إخلاء المسؤولية -->
+            <div class="footer-disclaimer">
+                <h4>إخلاء مسؤولية</h4>
+                <p>جميع المقالات، الأدلة، والآراء المطروحة في هذا الموقع تعبر عن رأيي الشخصي واجتهادي الخاص، ولا تمثل أو تعكس بالضرورة سياسات أو توجهات جهة العمل أو أي جهة حكومية أو رسمية أرتبط بها.</p>
+            </div>
+
+        </div>
+
+        
+    </footer>
 </body>
 </html>
