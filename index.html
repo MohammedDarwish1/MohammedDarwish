@@ -2,718 +2,504 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- أيقونة الموقع (تظهر في بحث جوجل والمتصفح) -->
-    <link rel="icon" type="image/png" href="profile.png">
-
-    <!-- الصورة التي تظهر عند مشاركة الرابط في الواتساب أو تويتر -->
-    <meta property="og:image" content="https://mohammeddarwish1.github.io/MohammedDarwish/profile.png">
-    <title>محمد يعقوب درويش | الموقع الرسمي</title>
-    <meta name="description" content="محمد درويش متخصص في خدمة العملاء وقطاع الأعمال في وزارة التجارة، يمتلك خبرة واسعة في دعم خدمات السجل التجاري، وخدمات الشركات، وتحسين تجربة المستفيدين.">
-
-    <meta property="og:site_name" content="محمد درويش">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "محمد يعقوب درويش",
-      "alternateName": ["Mohammed Darwish", "Mohammed Yaqub Darwish"],
-      "url": "https://mohammeddarwish1.github.io/MohammedDarwish/"
-    }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>محمد درويش | الموقع الرسمي</title>
     
+    <!-- الخطوط من جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- مكتبة الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* ================= المتغيرات والألوان ================= */
+       /* ================= المتغيرات والألوان ================= */
         :root {
-            --primary-dark: #07172A;   
-            --primary-light: #0F294D;  
-            --gold-accent: #D4AF37;    
-            --gold-hover: #F2C94C;     
-            --bg-body: #F8F9FA;        
-            --white-pure: #FFFFFF;
-            --text-dark: #1E293B;
-            --text-muted: #64748B;
-            --shadow-soft: 0 10px 40px -10px rgba(7, 23, 42, 0.08);
-            --shadow-hover: 0 20px 40px -10px rgba(7, 23, 42, 0.15);
-            --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg-color: #020b16; /* لون الموقع السادة الذي ستتدرج إليه الصورة */
+            --glass-bg: rgba(6, 21, 46, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --gold: #e5b842;
+            --gold-hover: #f1c757;
+            --green: #07463d;
+            --green-hover: #0a5c50;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --radius: 16px;
+            --transition: 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Tajawal', sans-serif;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- إعدادات الخلفية (في النصف العلوي فقط وتتلاشى للأسفل) --- */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; 
+            height: 90vh; /* تم التعديل: تأخذ مساحة الجزء العلوي فقط وليس كامل الموقع */
+            z-index: -2;
+            background-image: url('city.png');
+            background-size: cover;
+            background-position: center top;
+            /* التلاشي يبدأ من المنتصف وينتهي تماماً في آخر الصورة */
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+        }
+        
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; 
+            height: 90vh; /* تم التعديل لتطابق الصورة */
+            z-index: -1;
+            /* تظليل يندمج بنعومة مع لون الموقع الكحلي في الأسفل */
+            background: linear-gradient(to bottom, rgba(2, 11, 22, 0.2) 0%, var(--bg-color) 100%);
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 4%; }
+        a { text-decoration: none; color: inherit; }
+
+        /* ================= القائمة العلوية ================= */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 25px 4%; position: relative; z-index: 1000;
+        }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-icon {
+            font-size: 2.5rem; font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, #6fb6ad 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2px;
+        }
+        .logo-text h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: -3px; }
+        .logo-text p { font-size: 0.65rem; color: var(--gold); letter-spacing: 1px; }
+
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-size: 1.05rem; font-weight: 500; transition: var(--transition); position: relative; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+        .nav-links a.active::after {
+            content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--gold);
+        }
+
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .search-icon { font-size: 1.2rem; cursor: pointer; transition: var(--transition); }
+        .search-icon:hover { color: var(--gold); }
+        
+        .btn-green {
+            background: var(--green); color: var(--text-main);
+            padding: 10px 24px; border-radius: 8px; font-weight: 500;
+            display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition); cursor: pointer;
+        }
+        .btn-green:hover { background: var(--green-hover); }
+
+        /* ================= الهيكل الشبكي ================= */
+        .dashboard-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            grid-template-areas:
+                "text image"
+                "stats services"
+                "features services"
+                "navblocks article";
+            gap: 20px; padding-bottom: 50px; margin-top: 20px; position: relative; z-index: 5;
+        }
+
+        .glass-box {
+            background: var(--glass-bg); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border); border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: var(--transition);
+        }
+        .glass-box:hover { border-color: rgba(229, 184, 66, 0.2); }
+
+        /* ================= 1. قسم النصوص ================= */
+        .hero-text-block { grid-area: text; padding: 20px 10px; display: flex; flex-direction: column; justify-content: center; }
+        .badge { display: flex; align-items: center; gap: 15px; color: var(--gold); font-size: 1.05rem; font-weight: 500; margin-bottom: 25px; }
+        .badge span { width: 35px; height: 1px; background: var(--gold); }
+        .hero-text-block h1 { font-size: 4.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 15px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .hero-text-block p { font-size: 1.25rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 35px; max-width: 90%; }
+        
+        .hero-buttons { display: flex; gap: 15px; }
+        .btn-gold {
+            background: var(--gold); color: #000; padding: 12px 30px; border-radius: 8px;
+            font-weight: 700; font-size: 1.05rem; border: none; cursor: pointer;
+            display: flex; align-items: center; gap: 10px; transition: var(--transition);
+        }
+        .btn-gold:hover { background: var(--gold-hover); transform: translateY(-2px); }
+
+        /* ================= 2. الصورة الشخصية ================= */
+        .hero-image-block { 
+            grid-area: image; 
+            position: relative; 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-end; 
+            z-index: 10;
+        }
+        .hero-image-block img {
+            max-height: 550px; 
+            width: auto; 
+            object-fit: contain;
+            margin-bottom: -20px; 
+        }
+
+        /* ================= 3. الإحصائيات ================= */
+        .stats-block { grid-area: stats; display: flex; justify-content: space-between; padding: 25px 20px; }
+        .stat-item { text-align: center; flex: 1; display: flex; align-items: center; gap: 15px; justify-content: center; border-left: 1px solid var(--glass-border); }
+        .stat-item:last-child { border-left: none; }
+        .stat-item i { font-size: 1.8rem; color: var(--gold); }
+        .stat-text h3 { font-size: 1.5rem; direction: ltr; margin-bottom: 2px; }
+        .stat-text p { font-size: 0.8rem; color: var(--text-muted); }
+
+        /* ================= 4. المميزات ================= */
+        .features-section { grid-area: features; }
+        .divider {
+            display: flex; align-items: center; gap: 15px; justify-content: center;
+            color: var(--text-main); font-size: 1.2rem; font-weight: 700; margin: 10px 0 25px 0;
+        }
+        .divider::before, .divider::after { content: ''; width: 60px; height: 1px; background: var(--gold); }
+        .features-block { display: flex; justify-content: space-around; padding: 30px 10px; }
+        .feature-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; }
+        .feature-item i { font-size: 2rem; color: var(--gold); }
+        .feature-item h4 { font-size: 1rem; }
+        .feature-item p { font-size: 0.75rem; color: var(--text-muted); }
+
+        /* ================= 5. أزرار التنقل ================= */
+        .nav-blocks { grid-area: navblocks; display: flex; gap: 15px; }
+        .nav-block-item {
+            flex: 1; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px;
+            padding: 25px 10px; display: flex; flex-direction: column; align-items: center; gap: 10px;
+            color: var(--text-muted); transition: var(--transition); cursor: pointer;
+        }
+        .nav-block-item:hover, .nav-block-item.active { border-color: var(--gold); color: var(--gold); }
+        .nav-block-item i { font-size: 1.8rem; }
+        .nav-block-item span { font-size: 0.9rem; font-weight: 500; }
+
+        /* ================= 6. الخدمات ================= */
+        .services-block { grid-area: services; padding: 25px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; align-content: flex-start; }
+        .service-item {
+            width: calc(25% - 12px); display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 10px; cursor: pointer;
+        }
+        .service-item:nth-last-child(-n+3) { width: calc(33.333% - 15px); }
+        .service-item i { font-size: 2.2rem; color: var(--gold); margin-bottom: 15px; filter: drop-shadow(0 0 10px rgba(229, 184, 66, 0.2)); }
+        .service-item h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .service-item p { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+        /* ================= 7. المقال المميز ================= */
+        .article-block { grid-area: article; display: flex; overflow: hidden; align-items: center; padding: 0; }
+        .article-content { flex: 1; padding: 25px; }
+        .article-badge { background: var(--green); color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; margin-bottom: 15px; display: inline-block; }
+        .article-content h3 { font-size: 1.3rem; margin-bottom: 15px; line-height: 1.4; }
+        .article-meta { display: flex; gap: 20px; font-size: 0.85rem; color: var(--text-muted); }
+        .article-meta span { display: flex; align-items: center; gap: 6px; }
+        .article-img { width: 220px; height: 100%; }
+        .article-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px 0 0 16px; }
+
+        /* ================= أنيميشن (تأثير الظهور) ================= */
+        .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s ease forwards; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* ================= الشريط السفلي ================= */
+        .mobile-bottom-nav {
+            display: none; position: fixed; bottom: 0; width: 100%;
+            background: rgba(4, 15, 33, 0.95); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border);
+            z-index: 2000; padding: 12px 0; padding-bottom: calc(12px + env(safe-area-inset-bottom));
+        }
+        .mobile-bottom-nav ul { display: flex; justify-content: space-around; list-style: none; }
+        .mobile-bottom-nav a { display: flex; flex-direction: column; align-items: center; color: var(--text-muted); font-size: 0.75rem; gap: 6px; font-weight: 500; }
+        .mobile-bottom-nav a.active { color: var(--gold); }
+        .mobile-bottom-nav a i { font-size: 1.3rem; }
+
+        /* ================= التجاوب مع الجوال ================= */
+        @media (max-width: 992px) {
+            header .nav-links, header .btn-green { display: none; }
+            .mobile-bottom-nav { display: block; }
+            .nav-blocks { display: none; } 
+            
+            .dashboard-layout {
+                grid-template-columns: 1fr;
+                grid-template-areas: "image" "text" "services" "stats" "features" "article"; gap: 15px;
+            }
+            
+            .hero-image-block img { max-height: 400px; margin-bottom: -15px; } 
+            .hero-text-block { text-align: center; align-items: center; padding-top: 0; }
+            .hero-text-block h1 { font-size: 3.5rem; }
+            
+            .services-block { padding: 15px; }
+            .service-item { width: calc(50% - 10px) !important; padding: 15px 5px; } 
+            
+            .stats-block { flex-wrap: wrap; gap: 15px; }
+            .stat-item { width: 45%; flex: auto; border: none; justify-content: flex-start; }
+            
+            .features-block { flex-wrap: wrap; justify-content: center; gap: 20px; }
+            .feature-item { width: 30%; }
+            
+            .article-block { flex-direction: column; }
+            .article-img { width: 100%; height: 200px; }
+            .article-img img { border-radius: 16px 16px 0 0; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-buttons { flex-direction: column; width: 100%; }
+            .btn-gold, .btn-green { justify-content: center; width: 100%; }
+            .feature-item { width: 45%; }
         }
 
         html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        body {
-            background-color: var(--bg-body);
-            color: var(--text-dark);
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 88%;
-            max-width: 1250px;
-            margin: 0 auto;
-        }
-
-        img {
-            background-color: #E1E8ED;
-            color: var(--text-muted);
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        /* ================= شريط التنقل (تم تعديل الألوان للخلفية الفاتحة) ================= */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: var(--transition-fast);
-            padding: 1.5rem 0;
-            background: rgba(255, 255, 255, 0.0);
-        }
-
-        header.scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        
-        .logo { color: var(--primary-dark); font-size: 1.8rem; font-weight: 900; text-decoration: none; transition: var(--transition-fast); }
-        .logo span { color: var(--gold-accent); }
-        .logo:hover { transform: scale(1.05); }
-
-        .nav-links { list-style: none; display: flex; gap: 2.5rem; }
-        .nav-links a { color: var(--primary-dark); text-decoration: none; font-weight: 700; font-size: 1.05rem; transition: var(--transition-fast); position: relative; }
-        .nav-links a::after { content: ''; position: absolute; bottom: -5px; right: 0; width: 0; height: 2px; background-color: var(--gold-accent); transition: var(--transition-fast); }
-        .nav-links a:hover { color: var(--gold-accent); }
-        .nav-links a:hover::after { width: 100%; }
-
-        /* ================= الواجهة (Hero) - التصميم المتمركز والخلفية الفاتحة ================= */
-        .hero {
-            min-height: 100vh;
-            /* خلفية مباني مع طبقة بيضاء/رمادية شفافة فوقها */
-            background: linear-gradient(to bottom, rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.95)), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            padding-top: 80px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            color: var(--primary-dark);
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-dark);
-            margin-bottom: 2.5rem;
-            font-weight: 500;
-        }
-
-        /* زر داكن يتناسب مع التصميم */
-        .btn-dark {
-            display: inline-block;
-            background-color: var(--primary-dark);
-            color: var(--white-pure);
-            padding: 1rem 3rem;
-            font-size: 1.1rem;
-            font-weight: 800;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: var(--transition-fast);
-            box-shadow: 0 10px 20px rgba(7, 23, 42, 0.15);
-            border: 2px solid var(--primary-dark);
-        }
-        .btn-dark:hover { background-color: transparent; color: var(--primary-dark); transform: translateY(-5px); }
-
-        /* ================= العناوين المشتركة ================= */
-        .section { padding: 7rem 0; }
-        .section-title {
-            text-align: center; color: var(--primary-dark); font-size: 2.5rem; font-weight: 800; margin-bottom: 4rem; position: relative;
-        }
-        .section-title::after {
-            content: ""; display: block; width: 80px; height: 4px; background: linear-gradient(90deg, var(--gold-accent), transparent); margin: 15px auto 0; border-radius: 2px;
-        }
-
-      /* ================= قسم من أنا (محدث ومضبوط 100%) ================= */
-        .about-flex { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            gap: 4rem; 
-        }
-        
-        .about-img-container { 
-            flex: 0 0 300px; /* حجم ثابت وممتاز للصورة */
-            background-color: #FFFFFF; 
-            padding: 10px; /* إطار أبيض متساوٍ من جميع الجهات تماماً */
-            border: 2px solid var(--gold-accent); /* الإطار الذهبي أصبح متصلاً وملاصقاً للحواف */
-            border-radius: 20px; /* انحناء ناعم للإطار الخارجي */
-            box-shadow: 0 15px 35px rgba(7, 23, 42, 0.08); /* ظل فخم للبطاقة */
-        }
-        
-        /* قمنا بإلغاء الإطار المتطاير لأنه يسبب عدم التناسق */
-        .about-img-container::before { 
-            display: none; 
-        }
-        
-        .about-img { 
-            width: 100%; 
-            aspect-ratio: 4 / 5; /* نسبة مثالية للصور الشخصية تمنع الفراغات */
-            object-fit: cover; /* تغطية المساحة بالكامل بدون ضغط الصورة */
-            object-position: top center; /* التركيز على الوجه دائماً */
-            border-radius: 12px; /* انحناء داخلي متناسق تماماً مع الخارجي */
-            display: block;
-            background-color: #F8F9FA;
-        }
-        
-        .about-text { 
-            flex: 1; 
-        }
-        
-        .about-text p { 
-            font-size: 1.15rem; 
-            color: var(--text-muted); 
-            margin-bottom: 1.5rem; 
-            text-align: justify; 
-            line-height: 1.9; 
-        }
-        /* ================= قسم مجالات الخبرة ================= */
-        .bg-dark { background-color: var(--primary-dark); color: var(--white-pure); }
-        .bg-dark .section-title { color: var(--white-pure); }
-        .interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
-        .interest-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 3rem 2rem; border-radius: 16px; text-align: center; transition: var(--transition-fast); backdrop-filter: blur(10px); }
-        .interest-card:hover { background: rgba(255, 255, 255, 0.05); border-color: var(--gold-accent); transform: translateY(-10px); box-shadow: var(--shadow-hover); }
-        .icon-circle { width: 70px; height: 70px; background: rgba(212, 175, 55, 0.1); color: var(--gold-accent); font-size: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; transition: var(--transition-fast); }
-        .interest-card:hover .icon-circle { background: var(--gold-accent); color: var(--primary-dark); transform: scale(1.1) rotate(10deg); }
-        .interest-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--white-pure); }
-        .interest-card p { color: #94A3B8; font-size: 1rem; }
-
-        /* ================= قسم المقالات ================= */
-        .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
-        .article-card { display: block; background-color: var(--white-pure); text-decoration: none; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-soft); transition: var(--transition-slow); position: relative; }
-        .article-card:hover { transform: translateY(-12px); box-shadow: var(--shadow-hover); }
-        .article-img-wrapper { overflow: hidden; position: relative; }
-        .article-img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.8s ease; }
-        .article-card:hover .article-img { transform: scale(1.1); }
-        .article-img-wrapper::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(7, 23, 42, 0.8), transparent); opacity: 0; transition: var(--transition-fast); }
-        .article-card:hover .article-img-wrapper::after { opacity: 1; }
-        .article-title { padding: 1.8rem; color: var(--primary-dark); font-size: 1.3rem; font-weight: 800; text-align: center; transition: var(--transition-fast); border-bottom: 4px solid transparent; }
-        .article-card:hover .article-title { color: var(--gold-accent); border-bottom: 4px solid var(--gold-accent); }
-
-        /* ================= التذييل ================= */
-        footer { background-color: #040D1A; color: var(--white-pure); text-align: center; padding: 4rem 0; border-top: 2px solid rgba(212, 175, 55, 0.2); }
-        .footer-logo { font-size: 2rem; font-weight: 900; margin-bottom: 1rem; }
-        .footer-logo span { color: var(--gold-accent); }
-
-        /* ================= تأثيرات الظهور ================= */
-        .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* ================= التصميم المتجاوب ================= */
-        @media (max-width: 992px) {
-            .hero h1 { font-size: 2.8rem; }
-            .about-flex { flex-direction: column; }
-            .nav-links { display: none; }
-        }
-
-
-
-        /* ================= تعديل ألوان القائمة العلوية لتناسب الخلفية الغامقة ================= */
-    header a, 
-    .logo, 
-    .nav-link,
-    nav a {
-        color: #FFFFFF !important;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* إضافة ظل خفيف لزيادة الوضوح */
-        transition: color 0.3s ease;
-    }
-
-    header a:hover, 
-    .nav-link:hover,
-    nav a:hover {
-        color: #D4AF37 !important; /* يتغير للذهبي عند التمرير عليه */
-    }
-
-
-    /* ================= توحيد لون خلفية القائمة العلوية (الهيدر) ================= */
-    header, 
-    .navbar {
-        background-color: #07172A !important; /* لون كحلي فخم ومتناسق مع الواجهة */
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important; /* ظل احترافي يفصل القائمة عن المحتوى الأبيض */
-        border-bottom: 1px solid rgba(212, 175, 55, 0.15) !important; /* خط ذهبي خفيف جداً في أسفل القائمة */
-    }
-
-
-    /* ================= تحسين الواجهة وتناسقها مع شاشات الجوال ================= */
-    @media (max-width: 768px) {
-        .hero-section {
-            padding-top: 120px !important; /* إضافة مسافة علوية لإبعاد النص عن القائمة */
-            min-height: 100vh;
-            padding-bottom: 60px;
-        }
-        
-        .hero-badge {
-            font-size: 0.85rem !important;
-            margin-bottom: 1rem;
-            padding: 6px 15px;
-        }
-
-        .hero-title {
-            font-size: 2rem !important; /* تصغير العنوان الرئيسي ليناسب الجوال */
-            line-height: 1.4 !important;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1rem !important; /* تصغير حجم خط الوصف */
-            line-height: 1.8 !important;
-            padding: 0 10px; /* إضافة هوامش جانبية مريحة للعين */
-            text-align: justify; /* ضبط النص ليكون مرتباً كالمقالات */
-            text-align-last: center;
-        }
-
-        .hero-divider {
-            margin: 1.5rem auto !important; /* تقليل المسافة حول الخط الفاصل */
-        }
+        scroll-behavior: smooth;
     }
     
     </style>
 </head>
 <body>
 
-    <header id="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">محمد يعقوب درويش<span></span></a>
-            <ul class="nav-links">
-                <li><a href="#about">عن الكاتب</a></li>
-                <li><a href="#expertise">الخبرات</a></li>
-                <li><a href="#articles">المقالات</a></li>
-            </ul>
+    <!-- القائمة العلوية -->
+    <!-- ================= القائمة العلوية ================= -->
+    <header class="container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">MD</div>
+            <div class="logo-text" style="text-align: right;">
+                <h2>محمد درويش</h2>
+                <p>MOHAMMED DARWISH</p>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="article.html">المقالات</a>
+            <a href="library.html">المكتبة</a>
+            <a href="guides.html">الأدلة</a>
+            <a href="faq.html">الأسئلة الشائعة</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- تحويل الزر إلى رابط a لكي يعمل -->
+            <a href="contact.html" class="btn-green"><i class="fa-regular fa-user"></i> تواصل معي</a>
+           
         </div>
     </header>
-
-    <style>
-    /* ================= تنسيقات الواجهة الرئيسية (Hero Section) الفخمة ================= */
-    .hero-section {
-        position: relative;
-        background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'); /* يمكنك تغيير الرابط بصورتك */
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed; /* تأثير التمرير الفخم (Parallax) */
-        min-height: 90vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-
-    /* طبقة التعتيم الفاخرة فوق الصورة */
-    .hero-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(7, 23, 42, 0.95) 0%, rgba(15, 41, 77, 0.85) 100%);
-        z-index: 1;
-    }
-
-    /* حاوية المحتوى */
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 950px;
-        animation: fadeUp 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    /* شارة علوية أنيقة */
-    .hero-badge {
-        display: inline-block;
-        color: #D4AF37; /* اللون الذهبي */
-        font-size: 1.1rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 1.5rem;
-        padding: 8px 25px;
-        border: 1px solid rgba(212, 175, 55, 0.4);
-        border-radius: 50px;
-        background: rgba(212, 175, 55, 0.05);
-        backdrop-filter: blur(5px);
-    }
-
-    /* العنوان الرئيسي */
-    .hero-title {
-        color: #FFFFFF;
-        font-size: 3.5rem;
-        font-weight: 900;
-        line-height: 1.3;
-        margin-bottom: 2rem;
-        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-title span {
-        color: #D4AF37; /* تمييز كلمة باللون الذهبي */
-    }
-
-    /* الوصف الاحترافي */
-    .hero-subtitle {
-        color: #E2E8F0;
-        font-size: 1.25rem;
-        font-weight: 400;
-        line-height: 2.2;
-        margin: 0 auto;
-        max-width: 850px;
-        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-subtitle strong {
-        color: #FFFFFF;
-        font-weight: 700;
-    }
-
-    /* خط فاصل أنيق */
-    .hero-divider {
-        width: 120px;
-        height: 3px;
-        background: linear-gradient(90deg, transparent, #D4AF37, transparent);
-        margin: 2.5rem auto;
-        border-radius: 5px;
-    }
-
-    /* تأثيرات الحركة */
-    @keyframes fadeUp {
-        0% {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* التجاوب مع شاشات الجوال */
-    @media (max-width: 768px) {
-        .hero-title {
-            font-size: 2.2rem;
-        }
-        .hero-subtitle {
-            font-size: 1.1rem;
-            line-height: 1.9;
-        }
-        .hero-badge {
-            font-size: 0.9rem;
-        }
-    }
-</style>
-
-<!-- ================= قسم الواجهة الرئيسية ================= -->
-<section class="hero-section">
-    <div class="hero-content">
+    <!-- الهيكل الرئيسي (الشبكة) -->
+    <main class="container dashboard-layout">
         
-        <!-- الشارة العلوية -->
-        <div class="hero-badge">رؤية مؤسسية • كفاءة • جودة</div>
+        <!-- النصوص -->
+        <div class="hero-text-block fade-in" style="animation-delay: 0.1s;">
+            <div class="badge">
+                <span class="line"></span>
+                المعرفة التجارية... برؤية مهنية
+                <span class="line"></span>
+            </div>
+            <h1>محمد درويش</h1>
+            <p>أشارككم المعرفة والخبرة في مجال الأعمال والخدمات التجارية لمساعدتكم على إنجاز أعمالكم بثقة واحترافية</p>
+            <div class="hero-buttons">
+    <a href="#explore-section" class="btn-gold">استكشف المحتوى <i class="fa-solid fa-arrow-left"></i></a>
+    <a href="contact.html" class="btn-green"><i class="fa-regular fa-user"></i> تواصل معي</a>
+</div>
+        </div>
 
-        <!-- العنوان الرئيسي -->
-        <h1 class="hero-title">
-            الارتقاء بقطاع الأعمال<br>وهندسة <span>تجربة المستفيد</span>
-        </h1>
+        <!-- الصورة الشخصية -->
+        <div class="hero-image-block fade-in" style="animation-delay: 0.2s;">
+            <!-- تأكد من رفع صورتك بصيغة png مفرغة وتسميتها profile.png -->
+            <img src="profile.png" alt="محمد درويش">
+        </div>
 
-        <div class="hero-divider"></div>
+        <!-- الإحصائيات -->
+        <div class="stats-block glass-box fade-in" style="animation-delay: 0.3s;">
+            <div class="stat-item">
+                <i class="fa-regular fa-bell"></i>
+                <div class="stat-text">
+                    <h3 class="counter" data-target="50">+0</h3>
+                    <p>تحديث نظامي</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fa-solid fa-book-open"></i>
+                <div class="stat-text">
+                    <h3 class="counter" data-target="100">+0</h3>
+                    <p>دليل إجرائي</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fa-regular fa-folder-open"></i>
+                <div class="stat-text">
+                    <h3 class="counter" data-target="200">+0</h3>
+                    <p>ملف قابل للتحميل</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fa-regular fa-file-lines"></i>
+                <div class="stat-text">
+                    <h3 class="counter" data-target="500">+0</h3>
+                    <p>مقال معرفي</p>
+                </div>
+            </div>
+        </div>
 
-        <!-- الوصف الاحترافي (المُعاد صياغته) -->
-        <p class="hero-subtitle">
-            <strong>محمد يعقوب درويش</strong> | متخصص في تطوير قطاع الأعمال وخدمة العملاء بوزارة التجارة. أمتلك رصيداً واسعاً من الخبرة في دعم السجلات التجارية وخدمات الشركات، وأكرس جهدي لصياغة الأدلة الإجرائية والتعاميم المؤسسية؛ سعياً لرفع كفاءة الأداء، وتطوير جودة الخدمات، ونشر المعرفة المهنية الموثوقة لقطاع الأعمال.
-        </p>
+        <!-- المميزات -->
+        <div class="features-section fade-in" style="animation-delay: 0.4s;">
+            <div class="divider">ما يميز المحتوى</div>
+            <div class="features-block glass-box">
+                <div class="feature-item">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <h4>مفيد</h4>
+                    <p>محتوى مبسط ومفيد</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-users"></i>
+                    <h4>مجتمع</h4>
+                    <p>دعم وتبادل الخبرات بين المهتمين</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <h4>محدث</h4>
+                    <p>مواكبة مستمرة للتحديثات</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h4>عملي</h4>
+                    <p>محتوى تطبيقي سهل الفهم</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>موثوق</h4>
+                    <p>معلومات دقيقة من مصادر موثوقة</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل (للكومبيوتر فقط) -->
+        <div id="explore-section" class="nav-blocks fade-in" style="animation-delay: 0.5s;">
+            
+            <!-- 1. الرئيسية -->
+            <a href="index.html" class="nav-block-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>الرئيسية</span>
+            </a>
+            
+            <!-- 2. المقالات -->
+            <a href="article.html" class="nav-block-item">
+                <i class="fa-regular fa-file-lines"></i>
+                <span>المقالات</span>
+            </a>
+            
+            <!-- 3. المكتبة -->
+            <a href="library.html" class="nav-block-item">
+                <i class="fa-solid fa-book"></i>
+                <span>المكتبة</span>
+            </a>
+            
+            <!-- 4. الأدلة -->
+            <a href="guides.html" class="nav-block-item">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>الأدلة</span>
+            </a>
+            
+            <!-- 5. الأسئلة الشائعة-->
+            <a href="faq.html" class="nav-block-item" style="text-align: center;">
+    <i class="fa-regular fa-user"></i>
+    <span>الأسئلة الشائعة</span>
+</a>
+            
+        </div>
+
+        <!-- الخدمات -->
+        <div class="services-block glass-box fade-in" style="animation-delay: 0.6s;">
+            <div class="service-item">
+                <i class="fa-solid fa-headset"></i>
+                <h3>أسس ومبادئ خدمة العملاء</h3>
+                <p>أفضل الممارسات لتمكين تجربة عملاء استثنائية</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>الأنظمة واللوائح</h3>
+                <p>الأنظمة واللوائح التجارية والقرارات والتعليمات</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-regular fa-file-lines"></i>
+                <h3>السجل التجاري</h3>
+                <p>إجراءات وخدمات السجل التجاري وتحديث البيانات</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-tag"></i>
+                <h3>الأسماء التجارية</h3>
+                <p>حجز وإدارة الأسماء التجارية وكل ما يتعلق بها</p>
+            </div>
+            
+            <!-- الصف الثاني (3 عناصر تتوسط آلياً) -->
+            <div class="service-item">
+                <i class="fa-regular fa-circle-question"></i>
+                <h3>الأسئلة الشائعة</h3>
+                <p>إجابات على أهم الأسئلة الشائعة</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-regular fa-building"></i>
+                <h3>الشركات</h3>
+                <p>تأسيس وإدارة الشركات والتحولات والاندماج</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>الأدلة الإجرائية</h3>
+                <p>أدلة وخطوات إجرائية مبسطة لجميع الخدمات</p>
+            </div>
+        </div>
+
+       <!-- المقال -->
+    <div class="article-block glass-box fade-in" style="animation-delay: 0.7s;">
+        
+        <!-- القسم الأيمن: تم تحويله بالكامل إلى رابط يقود لمقالك الجديد وبدون أي تواريخ -->
+        <a href="article-details.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: center; flex: 1; padding: 25px; text-align: right;">
+            <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">خدمة العملاء</span>
+            <h3 style="margin: 0; line-height: 1.5; font-size: 1.35rem;">أهمية خدمة العملاء في تعزيز جودة الخدمات الحكومية</h3>
+        </a>
+
+        <!-- القسم الأيسر: صورة المقال الجديد -->
+        <div class="article-img">
+            <img src="p22.jpeg" alt="أهمية خدمة العملاء">
+        </div>
 
     </div>
-</section>
 
-    <!-- قسم من أنا (النص يميناً والصورة يساراً) -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title reveal">من أنا</h2>
-            <div class="about-flex">
-                <div class="about-text reveal">
-                    <p><strong>محمد درويش</strong> متخصص في خدمة العملاء وقطاع الأعمال في <strong>وزارة التجارة</strong>، يمتلك خبرة واسعة في دعم خدمات السجل التجاري، وخدمات الشركات، وتحسين تجربة المستفيدين.</p>
-                    <p>إلى جانب ذلك، يعمل على إعداد الأدلة الإجرائية والتعاميم الداخلية والتصاميم التوعوية، مع اهتمام بالغ بتطوير جودة الخدمات ونشر المعرفة المهنية لقطاع الأعمال.</p>
-                </div>
-                <div class="about-img-container reveal">
-                    <img src="me.jpeg" class="about-img" alt="محمد يعقوب درويش">
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
-   <style>
-    /* ================= تنسيقات قسم الخبرات (الاحترافية) ================= */
-    .expertise-section {
-        background-color: #07172A; /* لون الخلفية الكحلي الملكي */
-        padding: 6rem 0;
-        position: relative;
-    }
+    <!-- ================= الشريط السفلي ================= -->
+    <nav class="mobile-bottom-nav">
+        <ul style="direction: ltr; padding: 0;">
+            <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i>الأسئلة الشائعة</a></li>
+            <li><a href="guides.html"><i class="fa-solid fa-clipboard-list"></i>الأدلة</a></li>
+            <li><a href="library.html"><i class="fa-solid fa-book"></i>المكتبة</a></li>
+            <li><a href="article.html"><i class="fa-regular fa-file-lines"></i>المقالات</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>الرئيسية</a></li>
+        </ul>
+    </nav>
 
-    .expertise-section .section-title {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: #FFFFFF;
-        margin-bottom: 4rem;
-        position: relative;
-    }
-
-    /* الخط الذهبي تحت العنوان */
-    .expertise-section .section-title::after {
-        content: "";
-        display: block;
-        width: 80px;
-        height: 4px;
-        background-color: #D4AF37; 
-        margin: 15px auto 0;
-        border-radius: 4px;
-    }
-
-    /* شبكة البطاقات (تتجاوب تلقائياً مع الجوال والشاشة الكبيرة) */
-    .expertise-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2.5rem;
-        padding: 0 1rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    /* تصميم البطاقة نفسها */
-    .expertise-card {
-        background: linear-gradient(145deg, #0a1f3d, #07172A);
-        border: 1px solid rgba(212, 175, 55, 0.15); /* إطار ذهبي خفيف جداً */
-        border-radius: 16px;
-        padding: 3rem 2rem;
-        text-align: center;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* تأثير اللمعة العلوية للبطاقة */
-    .expertise-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, transparent, #D4AF37, transparent);
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    /* تأثيرات عند تمرير الماوس (Hover) */
-    .expertise-card:hover {
-        transform: translateY(-12px);
-        border-color: rgba(212, 175, 55, 0.6);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        background: linear-gradient(145deg, #0d2850, #0a1f3d);
-    }
-
-    .expertise-card:hover::before {
-        opacity: 1;
-    }
-
-    /* دائرة الأيقونة */
-    .icon-wrapper {
-        width: 85px;
-        height: 85px;
-        background: rgba(212, 175, 55, 0.05);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.8rem;
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        color: #D4AF37;
-        transition: all 0.4s ease;
-        box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.05);
-    }
-
-    .expertise-card:hover .icon-wrapper {
-        background: #D4AF37;
-        color: #07172A; /* يتغير لون الأيقونة للكحلي */
-        transform: scale(1.1) rotate(5deg);
-        box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-    }
-
-    .icon-wrapper svg {
-        width: 40px;
-        height: 40px;
-    }
-
-    /* نصوص البطاقة */
-    .expertise-title {
-        font-size: 1.4rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-        color: #FFFFFF;
-        line-height: 1.4;
-    }
-
-    .expertise-desc {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: #94A3B8; /* لون رمادي مزرق مريح للقراءة */
-        margin: 0;
-    }
-</style>
-
-<!-- ================= قسم مجالات الاهتمام والخبرة ================= -->
-<section id="expertise" class="expertise-section">
-    <div class="container">
-        <h2 class="section-title reveal">مجالات الاهتمام والخبرة</h2>
-        
-        <div class="expertise-grid">
-            
-            <!-- البطاقة الأولى: خدمة العملاء -->
-            <div class="expertise-card reveal">
-                <div class="icon-wrapper">
-                    <!-- أيقونة احترافية بصيغة SVG -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                </div>
-                <h3 class="expertise-title">تجربة المستفيد وخدمة العملاء</h3>
-                <p class="expertise-desc">تقديم الدعم المتخصص لخدمات السجل التجاري والشركات في وزارة التجارة، والعمل المستمر على تحسين رحلة وتجربة المستفيدين.</p>
-            </div>
-
-            <!-- البطاقة الثانية: الأدلة الإجرائية -->
-            <div class="expertise-card reveal">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                </div>
-                <h3 class="expertise-title">الأدلة الإجرائية والتعاميم</h3>
-                <p class="expertise-desc">إعداد وتطوير الأدلة الإجرائية والتعاميم الداخلية لضمان سير العمل بوضوح وكفاءة، وتوحيد المعايير لخدمة قطاع الأعمال.</p>
-            </div>
-
-            <!-- البطاقة الثالثة: المعرفة والجودة -->
-            <div class="expertise-card reveal">
-                <div class="icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 18h6"></path>
-                        <path d="M10 22h4"></path>
-                        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .34 2.02 1.5 3.5.76.75 1.23 1.51 1.4 2.5"></path>
-                    </svg>
-                </div>
-                <h3 class="expertise-title">جودة الخدمات ونشر المعرفة</h3>
-                <p class="expertise-desc">تصميم المحتوى التوعوي والمقالات المهنية للمساهمة في تطوير جودة الخدمات ونشر المعرفة المهنية لقطاع الأعمال.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <!-- قسم المقالات (تم تعديله ليعرض مقالاً واحداً بالمنتصف) -->
-    <section id="articles" class="section">
-        <div class="container">
-            <h2 class="section-title reveal">الإصدارات والمقالات</h2>
-            
-            <!-- استخدمنا flex و center لتوسيط البطاقة الوحيدة -->
-            <div class="articles-grid" style="display: flex; justify-content: center;">
-                
-                <!-- بطاقة المقال الوحيد -->
-                <a href="article.html" class="article-card reveal" style="max-width: 450px; width: 100%;">
-                    <div class="article-img-wrapper">
-                        <!-- صورة احترافية تعبر عن خدمة العملاء والعمل المكتبي -->
-                        <img src="p2.jpeg" class="article-img" alt="خدمة العملاء">
-                    </div>
-                    <div class="article-title">أهمية خدمة العملاء في تعزيز جودة الخدمات الحكومية</div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-logo reveal">محمد يعقوب درويش<span></span></div>
-            <p class="reveal" style="color: #64748B;">تنبيه: جميع الآراء والمحتوى المنشور في هذا الموقع يعبر عن وجهة نظر شخصية ولا يمثل أي جهة حكومية أو مؤسسية</p>
-            <p class="reveal" style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem; font-size: 0.9rem;">
-                جميع الحقوق محفوظة &copy; 2026 | محمد يعقوب درويش
-            </p>
-        </div>
-    </footer>
-
+    <!-- كود الجافاسكريبت لعداد الأرقام (+50, +100...) -->
     <script>
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+        const counters = document.querySelectorAll('.counter');
+        const speed = 150; 
 
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace('+', '');
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = '+' + Math.ceil(count + inc);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = '+' + target;
                 }
-            }
-        }
-        
-        window.addEventListener("scroll", reveal);
-        window.addEventListener("load", reveal);
+            };
+            
+            // تشغيل العداد بعد تحميل الصفحة بوقت قصير
+            setTimeout(updateCount, 800);
+        });
     </script>
 </body>
 </html>
