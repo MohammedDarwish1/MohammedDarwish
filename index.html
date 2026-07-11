@@ -218,43 +218,81 @@
         .mobile-bottom-nav a i { font-size: 1.3rem; }
 
         /* ================= التجاوب مع الجوال ================= */
-        @media (max-width: 992px) {
-            header .nav-links, header .btn-green { display: none; }
-            .mobile-bottom-nav { display: block; }
-            .nav-blocks { display: none; } 
-            
-            .dashboard-layout {
-                grid-template-columns: 1fr;
-                grid-template-areas: "image" "text" "services" "stats" "features" "article"; gap: 15px;
-            }
-            
-            .hero-image-block img { max-height: 400px; margin-bottom: -15px; } 
-            .hero-text-block { text-align: center; align-items: center; padding-top: 0; }
-            .hero-text-block h1 { font-size: 3.5rem; }
-            
-            .services-block { padding: 15px; }
-            .service-item { width: calc(50% - 10px) !important; padding: 15px 5px; } 
-            
-            .stats-block { flex-wrap: wrap; gap: 15px; }
-            .stat-item { width: 45%; flex: auto; border: none; justify-content: flex-start; }
-            
-            .features-block { flex-wrap: wrap; justify-content: center; gap: 20px; }
-            .feature-item { width: 30%; }
-            
-            .article-block { flex-direction: column; }
-            .article-img { width: 100%; height: 200px; }
-            .article-img img { border-radius: 16px 16px 0 0; }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-buttons { flex-direction: column; width: 100%; }
-            .btn-gold, .btn-green { justify-content: center; width: 100%; }
-            .feature-item { width: 45%; }
-        }
-
-        html {
-        scroll-behavior: smooth;
+        /* ================= تنسيقات مخصصة لإصلاح الموبايل والتابلت ================= */
+@media (max-width: 992px) {
+    /* 1. ضبط الخلفية لتظهر بشكل كامل ومتناسق بدون زووم مشوه */
+    body::before {
+        height: 100vh !important;
+        background-position: center center !important; /* توسيط خلفية المدينة */
+        background-size: cover !important;
     }
+
+    /* 2. إعادة ترتيب حاوية الواجهة (النصوص والصورة) لتصبح فوق بعضها */
+    .hero-container, .hero-wrapper { 
+        display: flex !important;
+        flex-direction: column-reverse !important; /* النص في الأعلى والصورة في الأسفل أو العكس حسب ترتيب الكود */
+        align-items: center !important;
+        text-align: center !important;
+        padding-top: 40px !important;
+        gap: 20px !important;
+    }
+
+    /* 3. تحجيم الصورة الشخصية لتبدو متناسقة ولا تغطي الشاشة */
+    .hero-img, .profile-img-container {
+        width: 100% !important;
+        max-width: 260px !important; /* تقليص الحجم ليتسع لباقي عناصر الصفحة */
+        margin: 0 auto !important;
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .hero-img img, .profile-img-container img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        max-height: 280px !important;
+    }
+
+    /* 4. ضبط النصوص لكي لا تتداخل أو تختفي أسفل الشاشة */
+    .hero-text {
+        width: 100% !important;
+        padding: 0 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem !important; /* تصغير حجم "محمد درويش" ليناسب الجوال */
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        line-height: 1.3 !important;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        max-width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 5. ترتيب أزرار الواجهة وتوسيطها */
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: row !important; /* جعل الأزرار بجانب بعضها بشكل متناسق */
+        justify-content: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+    
+    .hero-buttons a, .hero-buttons button {
+        padding: 12px 20px !important;
+        font-size: 0.9rem !important;
+        flex: 1 !important; /* لتتوزع المساحة بالتساوي بين الزرين */
+        max-width: 160px !important;
+    }
+}
     
     </style>
 </head>
