@@ -1,0 +1,320 @@
+<!DOCTYPE html> 
+<html lang="ar" dir="rtl"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    
+    <!-- عنوان SEO والوصف التعريفي -->
+    <title>أبرز الفروقات بين نظام السجل التجاري القديم والجديد في السعودية | محمد درويش</title> 
+    <meta name="description" content="تعرّف على أبرز الفروقات بين نظام السجل التجاري القديم ونظام السجل التجاري الجديد في المملكة العربية السعودية، بما يشمل السجل التجاري الواحد، إلغاء السجلات الفرعية، والتأكيد السنوي للبيانات.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    
+    <style> 
+        /* ================= المتغيرات والألوان ================= */ 
+        :root { 
+            --bg-color: #020b16; 
+            --glass-bg: rgba(6, 21, 46, 0.65); 
+            --glass-border: rgba(255, 255, 255, 0.06); 
+            --gold: #e5b842; 
+            --gold-hover: #f1c757; 
+            --green: #07463d; 
+            --green-hover: #0a5c50; 
+            --text-main: #ffffff; 
+            --text-muted: #94a3b8; 
+            --radius: 16px; 
+            --transition: 0.3s ease; 
+        } 
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; } 
+        body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; position: relative; } 
+        
+        /* --- خلفية الموقع الموحدة --- */ 
+        body::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 60vh; z-index: -2; background-image: url('city.png'); background-size: cover; background-position: center top; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); } 
+        body::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 60vh; z-index: -1; background: linear-gradient(to bottom, rgba(2, 11, 22, 0.3) 0%, var(--bg-color) 100%); } 
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 4%; } 
+        a { text-decoration: none; color: inherit; } 
+        
+        /* ================= القائمة العلوية ================= */ 
+        header { display: flex; justify-content: space-between; align-items: center; padding: 25px 4%; position: relative; z-index: 1000; } 
+        .logo { display: flex; align-items: center; gap: 12px; } 
+        .logo-icon { font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #fff 0%, #6fb6ad 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2px; } 
+        .logo-text h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: -3px; } 
+        .logo-text p { font-size: 0.65rem; color: var(--gold); letter-spacing: 1px; } 
+        .nav-links { display: flex; gap: 30px; } 
+        .nav-links a { font-size: 1.05rem; font-weight: 500; transition: var(--transition); position: relative; } 
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); } 
+        .nav-links a.active::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--gold); } 
+        .header-actions { display: flex; align-items: center; gap: 20px; } 
+        .search-icon { font-size: 1.2rem; cursor: pointer; transition: var(--transition); } 
+        .search-icon:hover { color: var(--gold); } 
+        .btn-green { background: var(--green); color: var(--text-main); padding: 10px 24px; border-radius: 8px; font-weight: 500; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); cursor: pointer; } 
+        .btn-green:hover { background: var(--green-hover); } 
+        
+        /* ================= تصميم صفحة المقال (Article Layout) ================= */ 
+        .article-wrapper { max-width: 900px; /* عرض مثالي للقراءة */ margin: 40px auto 80px; position: relative; z-index: 5; } 
+        .glass-box { background: var(--glass-bg); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid var(--glass-border); border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,0.3); padding: 50px; } 
+        
+        /* --- ترويسة المقال --- */ 
+        .article-header { text-align: center; margin-bottom: 40px; } 
+        .article-category { display: inline-block; background: rgba(229, 184, 66, 0.1); color: var(--gold); padding: 6px 16px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; margin-bottom: 20px; border: 1px solid rgba(229, 184, 66, 0.2); } 
+        .article-title { font-size: 2.8rem; font-weight: 900; line-height: 1.3; margin-bottom: 25px; color: var(--text-main); } 
+        .article-meta { display: flex; justify-content: center; gap: 25px; color: var(--text-muted); font-size: 0.95rem; align-items: center; } 
+        .article-meta span { display: flex; align-items: center; gap: 8px; } 
+        .article-meta i { color: var(--gold); } 
+        
+        /* --- صورة المقال --- */ 
+        .article-featured-image { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); } 
+        
+        /* --- محتوى المقال --- */ 
+        .article-body { font-size: 1.15rem; line-height: 1.95; color: #cbd5e1; text-align: justify; } 
+        .article-body h2 { font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin: 40px 0 20px; display: flex; align-items: center; gap: 15px; } 
+        .article-body h2::before { content: ''; display: block; width: 6px; height: 25px; background: var(--gold); border-radius: 4px; } 
+        .article-body h3 { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin: 30px 0 15px; } 
+        .article-body p { margin-bottom: 20px; } 
+        
+        /* تنسيق القوائم والنقاط */ 
+        .article-body ul { list-style: none; padding-right: 10px; margin-bottom: 25px; } 
+        .article-body ul li { position: relative; padding-right: 25px; margin-bottom: 12px; } 
+        .article-body ul li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; right: 0; top: 4px; color: var(--gold); font-size: 0.9rem; } 
+        
+        /* --- تصميم جدول المقارنة --- */
+        .table-responsive { overflow-x: auto; margin: 40px 0; border-radius: 12px; border: 1px solid var(--glass-border); }
+        table { width: 100%; border-collapse: collapse; background: rgba(0, 0, 0, 0.2); text-align: right; min-width: 600px; }
+        th, td { padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        th { background: rgba(229, 184, 66, 0.1); color: var(--gold); font-weight: 800; font-size: 1.1rem; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: rgba(255, 255, 255, 0.02); }
+        td:first-child { font-weight: 700; color: var(--text-main); width: 25%; }
+
+        /* --- صندوق الكاتب --- */ 
+        .author-box { display: flex; align-items: center; gap: 25px; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--glass-border); } 
+        .author-img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); background: #0a192f; } 
+        .author-info h4 { font-size: 1.3rem; margin-bottom: 8px; color: var(--text-main); } 
+        .author-info p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin: 0; } 
+        
+        /* إخلاء المسؤولية */ 
+        .disclaimer { margin-top: 25px; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 8px; font-size: 0.85rem; color: #64748b; text-align: center; font-style: italic; } 
+        
+        /* ================= الشريط السفلي للجوال ================= */ 
+        .mobile-bottom-nav { display: none; position: fixed; bottom: 0; width: 100%; background: rgba(4, 15, 33, 0.95); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); z-index: 2000; padding: 12px 0; padding-bottom: calc(12px + env(safe-area-inset-bottom)); } 
+        .mobile-bottom-nav ul { display: flex; justify-content: space-around; list-style: none; direction: ltr; padding: 0; } 
+        .mobile-bottom-nav a { display: flex; flex-direction: column; align-items: center; color: var(--text-muted); font-size: 0.75rem; gap: 6px; font-weight: 500; } 
+        .mobile-bottom-nav a.active { color: var(--gold); } 
+        .mobile-bottom-nav a i { font-size: 1.3rem; } 
+        
+        /* ================= التجاوب مع الجوال ================= */ 
+        @media (max-width: 992px) { 
+            header .nav-links, header .btn-green { display: none; } 
+            .mobile-bottom-nav { display: block; } 
+            .glass-box { padding: 30px 20px; border-radius: 0; border-left: none; border-right: none; } 
+            .article-wrapper { margin-top: 10px; margin-bottom: 100px; } 
+            .article-title { font-size: 2rem; } 
+            .article-featured-image { height: 250px; } 
+            .author-box { flex-direction: column; text-align: center; } 
+            .article-meta { flex-direction: column; gap: 10px; } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <!-- ================= القائمة العلوية ================= --> 
+    <header class="container"> 
+        <a href="index.html" class="logo"> 
+            <div class="logo-icon">MD</div> 
+            <div class="logo-text" style="text-align: right;"> 
+                <h2>محمد درويش</h2> 
+                <p>MOHAMMED DARWISH</p> 
+            </div> 
+        </a> 
+        <nav class="nav-links"> 
+            <a href="index.html">الرئيسية</a> 
+            <a href="article.html" class="active">المقالات</a> 
+            <a href="library.html">المكتبة</a> 
+            <a href="guides.html">الأدلة</a> 
+            <a href="faq.html">الأسئلة الشائعة</a> 
+        </nav> 
+        <div class="header-actions"> 
+            <a href="contact.html" class="btn-green"><i class="fa-regular fa-user"></i> تواصل معي</a> 
+        </div> 
+    </header> 
+
+    <main class="container article-wrapper"> 
+        <article class="glass-box"> 
+            <div class="article-header"> 
+                <span class="article-category">السجل التجاري</span> 
+                <h1 class="article-title">أبرز الفروقات بين نظام السجل التجاري القديم والجديد في السعودية</h1> 
+                <div class="article-meta"> 
+                    <span><i class="fa-solid fa-pen-nib"></i> بقلم: محمد يعقوب درويش</span> 
+                    <span><i class="fa-solid fa-briefcase"></i> ممثل خدمة العملاء</span> 
+                    <span><i class="fa-regular fa-calendar"></i> 11 يوليو 2026</span> 
+                </div> 
+            </div> 
+            
+            <img src="ppaa1.png" alt="نظام السجل التجاري الجديد" class="article-featured-image"> 
+            
+            <div class="article-body"> 
+                <p>شهدت البيئة التجارية في المملكة العربية السعودية تحولًا تنظيميًا مهمًا مع تطبيق نظام السجل التجاري الجديد، الذي يهدف إلى تطوير الإجراءات التجارية، وتعزيز موثوقية البيانات، وتسهيل ممارسة الأعمال، ومواكبة التحول الرقمي الذي تشهده المملكة.</p>
+                <p>ويُعد هذا النظام نقلة مهمة في مفهوم السجل التجاري؛ إذ انتقل من نموذج يعتمد على تعدد السجلات التجارية وارتباطها بالمناطق والفروع إلى نموذج أكثر تكاملًا يعتمد على سجل تجاري واحد للمنشأة على مستوى المملكة.</p>
+                <p>في هذا المقال، نستعرض أبرز الفروقات بين النظام القديم والنظام الجديد للسجل التجاري، وأهم التغييرات التي تهم أصحاب الأعمال والمستثمرين.</p>
+
+                <h2>1. سجل تجاري واحد على مستوى المملكة</h2>
+                <p>يُعد هذا التغيير من أبرز الفروقات بين النظامين.</p>
+                <h3>في النظام القديم</h3>
+                <p>كان من الممكن أن يكون للمنشأة سجل تجاري رئيسي وعدد من السجلات التجارية الفرعية، بحسب الفروع ومواقع ممارسة النشاط.</p>
+                <h3>في النظام الجديد</h3>
+                <p>أصبح التوجه قائمًا على وجود سجل تجاري واحد للمنشأة على مستوى المملكة، بما يسهم في توحيد بيانات المنشأة وتسهيل إدارتها.</p>
+                <p>ويحقق ذلك عددًا من المزايا، من أبرزها:</p>
+                <ul>
+                    <li>تقليل تعدد السجلات التجارية.</li>
+                    <li>تسهيل إدارة بيانات المنشأة.</li>
+                    <li>تعزيز تكامل المعلومات التجارية.</li>
+                    <li>تبسيط الإجراءات على أصحاب الأعمال.</li>
+                    <li>دعم توسع المنشآت في مختلف مناطق المملكة.</li>
+                </ul>
+
+                <h2>2. الاستغناء عن السجلات التجارية الفرعية</h2>
+                <p>في النظام السابق، كانت المنشأة قد تمتلك سجلًا رئيسيًا وسجلات فرعية مرتبطة بفروعها.</p>
+                <p>أما في النظام الجديد، فقد تغير هذا المفهوم ليصبح للمنشأة سجل تجاري واحد، مع تنظيم بيانات الفروع والأنشطة وفق الإجراءات والمتطلبات المعتمدة.</p>
+                <p>ويمثل هذا التغيير تحولًا من تعدد السجلات إلى توحيد الهوية التجارية للمنشأة.</p>
+
+                <h2>3. التأكيد السنوي بدلًا من التجديد التقليدي</h2>
+                <p>من التغييرات المهمة في النظام الجديد الانتقال من مفهوم تجديد السجل التجاري إلى مفهوم التأكيد السنوي لبيانات السجل التجاري.</p>
+                <h3>سابقًا</h3>
+                <p>كان السجل التجاري يصدر لمدة محددة، ويتطلب تجديده عند انتهاء المدة.</p>
+                <h3>في النظام الجديد</h3>
+                <p>يتم التأكيد السنوي على صحة بيانات السجل التجاري، بما يضمن استمرار تحديث معلومات المنشأة ورفع مستوى موثوقيتها.</p>
+                <p>ويهدف التأكيد السنوي إلى:</p>
+                <ul>
+                    <li>المحافظة على تحديث بيانات المنشآت.</li>
+                    <li>تعزيز دقة المعلومات التجارية.</li>
+                    <li>الحد من وجود بيانات قديمة أو غير محدثة.</li>
+                    <li>رفع مستوى الشفافية والموثوقية.</li>
+                </ul>
+                <p>وبذلك أصبح التركيز لا يقتصر على تمديد مدة السجل، بل على التأكد بصورة دورية من صحة البيانات التجارية.</p>
+
+                <h2>4. مرونة أكبر في ممارسة الأعمال</h2>
+                <p>يسهم النظام الجديد في منح المنشآت مرونة أكبر في إدارة أعمالها والتوسع في مختلف مناطق المملكة.</p>
+                <p>فبدلًا من الحاجة إلى إدارة عدد من السجلات التجارية المرتبطة بالفروع، أصبح السجل التجاري يمثل المنشأة بصورة أكثر شمولًا على مستوى المملكة، مع الالتزام بالمتطلبات النظامية والتراخيص اللازمة لكل نشاط.</p>
+
+                <h2>5. تحسين جودة وموثوقية البيانات التجارية</h2>
+                <p>يركز النظام الجديد على تحديث البيانات التجارية بصورة مستمرة، وهو ما يساعد على بناء قاعدة بيانات أكثر دقة وموثوقية.</p>
+                <p>وتبرز أهمية ذلك في:</p>
+                <ul>
+                    <li>سهولة التحقق من بيانات المنشآت.</li>
+                    <li>تحسين التكامل بين الجهات ذات العلاقة.</li>
+                    <li>تقليل ازدواجية البيانات.</li>
+                    <li>تعزيز الشفافية في السوق.</li>
+                    <li>رفع جودة الخدمات الإلكترونية المقدمة لقطاع الأعمال.</li>
+                </ul>
+
+                <h2>6. تبسيط رحلة المستثمر وصاحب المنشأة</h2>
+                <p>يسهم توحيد السجل التجاري في تقليل الإجراءات المرتبطة بإدارة عدد كبير من السجلات.</p>
+                <p>وهذا يعني أن صاحب المنشأة يستطيع إدارة بيانات أعماله بصورة أكثر تكاملًا، مما يساعد على:</p>
+                <ul>
+                    <li>تقليل الإجراءات الإدارية.</li>
+                    <li>تسهيل إدارة الفروع.</li>
+                    <li>تسريع الوصول إلى الخدمات.</li>
+                    <li>دعم نمو وتوسع المنشآت.</li>
+                    <li>تحسين تجربة المستثمر.</li>
+                </ul>
+
+                <h2>مقارنة بين نظام السجل التجاري القديم والجديد</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>وجه المقارنة</th>
+                                <th>النظام القديم</th>
+                                <th>النظام الجديد</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>عدد السجلات</td>
+                                <td>سجل رئيسي وإمكانية وجود سجلات فرعية</td>
+                                <td>سجل تجاري واحد للمنشأة على مستوى المملكة</td>
+                            </tr>
+                            <tr>
+                                <td>السجلات الفرعية</td>
+                                <td>موجودة</td>
+                                <td>الاستغناء عن مفهوم السجل التجاري الفرعي</td>
+                            </tr>
+                            <tr>
+                                <td>التجديد</td>
+                                <td>تجديد السجل لمدة محددة</td>
+                                <td>التأكيد السنوي للبيانات</td>
+                            </tr>
+                            <tr>
+                                <td>إدارة الفروع</td>
+                                <td>قد ترتبط بسجلات تجارية فرعية</td>
+                                <td>إدارة أكثر تكاملًا ضمن بيانات المنشأة</td>
+                            </tr>
+                            <tr>
+                                <td>تحديث البيانات</td>
+                                <td>عند التعديل أو التجديد</td>
+                                <td>تأكيد دوري على صحة البيانات</td>
+                            </tr>
+                            <tr>
+                                <td>التوسع الجغرافي</td>
+                                <td>قد يرتبط بإجراءات وسجلات إضافية</td>
+                                <td>مرونة أكبر في التوسع على مستوى المملكة</td>
+                            </tr>
+                            <tr>
+                                <td>موثوقية البيانات</td>
+                                <td>تعتمد على تحديث صاحب السجل</td>
+                                <td>تعزيز التحديث الدوري من خلال التأكيد السنوي</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>ما أهمية النظام الجديد لأصحاب الأعمال؟</h2>
+                <p>يمنح النظام الجديد أصحاب الأعمال نموذجًا أكثر بساطة في إدارة بيانات المنشآت، إلا أنه في الوقت نفسه يعزز أهمية الالتزام بتحديث البيانات وإجراء التأكيد السنوي في المواعيد المحددة.</p>
+                <p>لذلك، ينبغي على أصحاب السجلات التجارية التأكد بصورة مستمرة من صحة بيانات المنشأة، ومتابعة المتطلبات النظامية والتنظيمية المرتبطة بالسجل والأنشطة والتراخيص.</p>
+
+                <h2>أسئلة شائعة حول نظام السجل التجاري الجديد</h2>
+                <h3>هل يوجد سجل تجاري فرعي في النظام الجديد؟</h3>
+                <p>يقوم النظام الجديد على مفهوم السجل التجاري الواحد للمنشأة على مستوى المملكة، بدلًا من تعدد السجلات الرئيسية والفرعية بالصورة السابقة.</p>
+                
+                <h3>ما الفرق بين تجديد السجل والتأكيد السنوي؟</h3>
+                <p>كان النظام السابق يعتمد على تجديد السجل التجاري لمدة محددة، بينما يعتمد النظام الجديد على التأكيد السنوي لصحة البيانات المسجلة.</p>
+                
+                <h3>هل يمكن للمنشأة ممارسة أكثر من نشاط؟</h3>
+                <p>يمكن للمنشأة ممارسة الأنشطة وفق الأنظمة واللوائح والمتطلبات والتراخيص المنظمة لكل نشاط.</p>
+                
+                <h3>ما الهدف من السجل التجاري الواحد؟</h3>
+                <p>يهدف إلى تبسيط الإجراءات، وتوحيد بيانات المنشأة، وتقليل تعدد السجلات، وتحسين جودة وموثوقية المعلومات التجارية.</p>
+
+                <h2>الخلاصة</h2>
+                <p>يمثل نظام السجل التجاري الجديد تحولًا مهمًا في تطوير البيئة التجارية في المملكة العربية السعودية، حيث انتقل النظام من نموذج يعتمد على تعدد السجلات التجارية والتجديد الدوري إلى نموذج أكثر تكاملًا يقوم على سجل تجاري واحد للمنشأة على مستوى المملكة والتأكيد السنوي للبيانات.</p>
+                <p>ومن المتوقع أن يسهم هذا التحول في تسهيل ممارسة الأعمال، وتحسين جودة البيانات التجارية، وتعزيز الشفافية، ودعم نمو المنشآت وتوسعها.</p>
+            </div> 
+
+            <div class="author-box"> 
+                <img src="me.jpeg" alt="محمد درويش" class="author-img"> 
+                <div class="author-info"> 
+                    <h4>إعداد: محمد درويش</h4> 
+                    <p>ممثل خدمة العملاء بفرع وزارة التجارة بالمنطقة الشرقية</p> 
+                </div> 
+            </div> 
+
+            <div class="disclaimer"> 
+                يعكس هذا المقال آراءً ومعلومات مهنية عامة، ولا يمثل بيانًا أو موقفًا رسميًا لأي جهة حكومية. 
+            </div> 
+        </article> 
+    </main> 
+
+    <!-- ================= الشريط السفلي ================= --> 
+    <nav class="mobile-bottom-nav"> 
+        <ul style="direction: ltr; padding: 0;"> 
+            <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i>الأسئلة الشائعة</a></li> 
+            <li><a href="guides.html"><i class="fa-solid fa-clipboard-list"></i>الأدلة</a></li> 
+            <li><a href="library.html"><i class="fa-solid fa-book"></i>المكتبة</a></li> 
+            <li><a href="article.html" class="active"><i class="fa-regular fa-file-lines"></i>المقالات</a></li> 
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>الرئيسية</a></li> 
+        </ul> 
+    </nav> 
+</body> 
+</html>
