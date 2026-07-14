@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- الصفحات الرئيسية -->
   <url>
-    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/index.html</loc>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/article.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/library.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/guides.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/faq.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/contact.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المقالات -->
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/article-details.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/annual-confirmation-commercial-registration.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/not-completing-annual-confirmation-commercial-registration.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/new-companies-law-saudi-arabia.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/differences-old-new-companies-law-saudi-arabia.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mohammeddarwish1.github.io/MohammedDarwish/commercial-names-law-saudi-arabia.html</loc>
+    <priority>0.7</priority>
   </url>
 </urlset>
