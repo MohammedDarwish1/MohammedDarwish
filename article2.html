@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>المقالات | محمد يعقوب درويش</title>
+    <title>المقالات - الصفحة 2 | محمد يعقوب درويش</title>
 
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MW3D24R2G"></script>
@@ -17,9 +17,8 @@
 
    
     <meta property="og:site_name" content="محمد يعقوب درويش | الموقع الرسمي">
-
     <meta name="description" content="دليلك الشامل لكل ما يخص الأنظمة التجارية في السعودية. تصفح مقالات وأدلة محمد يعقوب درويش المبسطة حول السجل التجاري، تأسيس الشركات، وتطوير الأعمال.">
-    <link rel="icon" type="image/png" href="profile2.webp">
+    <link rel="icon" type="image/png" href="profile2.png">
 
     <script type="application/ld+json">
     {
@@ -230,78 +229,31 @@
             .articles-grid { grid-template-columns: 1fr; }
         }
 
-
         /* ================= الفوتر (تذييل الصفحة) ================= */
-.site-footer {
-    background: rgba(4, 15, 33, 0.8);
-    border-top: 1px solid var(--glass-border);
-    padding: 50px 0 20px;
-    margin-top: 60px;
-    position: relative;
-    z-index: 10;
-}
+        .site-footer {
+            background: rgba(4, 15, 33, 0.8);
+            border-top: 1px solid var(--glass-border);
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 10;
+        }
+        .footer-content { display: flex; justify-content: space-between; gap: 40px; margin-bottom: 30px; }
+        .footer-info, .footer-disclaimer { flex: 1; }
+        .site-footer h4 { color: var(--gold); font-size: 1.2rem; margin-bottom: 15px; }
+        .site-footer p { color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; margin-bottom: 15px; }
+        .footer-email {
+            display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.05);
+            padding: 10px 20px; border-radius: 8px; color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.1); transition: var(--transition); direction: ltr;
+        }
+        .footer-email:hover { border-color: var(--gold); color: var(--gold); }
+        .footer-bottom { text-align: center; border-top: 1px dashed rgba(255, 255, 255, 0.05); padding-top: 20px; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 30px;
-}
-
-.footer-info, .footer-disclaimer {
-    flex: 1;
-}
-
-.site-footer h4 {
-    color: var(--gold);
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.site-footer p {
-    color: var(--text-muted);
-    line-height: 1.7;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-}
-
-.footer-email {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 10px 20px;
-    border-radius: 8px;
-    color: var(--text-main);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
-    direction: ltr;
-}
-
-.footer-email:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-}
-
-.footer-bottom {
-    text-align: center;
-    border-top: 1px dashed rgba(255, 255, 255, 0.05);
-    padding-top: 20px;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 0.85rem;
-}
-
-/* تجاوب الفوتر مع الجوال */
-@media (max-width: 992px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-    .site-footer {
-        padding-bottom: 90px; /* لترك مساحة للشريط السفلي الثابت في الجوال */
-    }
-}
+        @media (max-width: 992px) {
+            .footer-content { flex-direction: column; gap: 30px; text-align: center; }
+            .site-footer { padding-bottom: 90px; }
+        }
     </style>
 </head>
 <body>
@@ -326,7 +278,6 @@
 
         <div class="header-actions">
             <a href="contact.html" class="btn-green"><i class="fa-regular fa-user"></i> تواصل معي</a>
-           
         </div>
     </header>
 
@@ -340,148 +291,39 @@
         <!-- شبكة المقالات (Grid) -->
         <div class="articles-grid">
             
-            <!-- المقال الأساسي -->
-            <a href="article-details.html" class="article-card">
-                <div class="article-card-img">
-                    <span class="article-badge">خدمة العملاء</span>
-                    <img src="p2.webp" alt="أهمية خدمة العملاء">
-                </div>
-                <div class="article-card-content">
-                    <h3 class="article-card-title">أهمية خدمة العملاء في تعزيز جودة الخدمات الحكومية</h3>
-                    <p class="article-card-excerpt">لم يعد نجاح الخدمة يعتمد على سرعة إنجاز المعاملة فقط، بل يشمل أيضًا جودة تجربة المستفيد ووضوح الإجراءات...</p>
-                    <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
-                </div>
-            </a>
-
-            <a href="differences-old-new-commercial-registration-system-saudi-arabia.html" class="article-card">
+            <!-- المقال الجديد الخاص بنقل الملكية -->
+            <a href="transfer-commercial-registration-ownership.html" class="article-card">
                 <div class="article-card-img">
                     <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">السجل التجاري</span>
-                    <img src="ppaa1.webp" alt="أبرز الفروقات بين نظام السجل التجاري القديم والجديد في السعودية">
+                    <img src="ppa3.webp" alt="نقل ملكية السجل التجاري" loading="lazy">
                 </div>
                 <div class="article-card-content">
-                    <h3 class="article-card-title">أبرز الفروقات بين نظام السجل التجاري القديم والجديد في السعودية</h3>
-                    <p class="article-card-excerpt">في هذا المقال، نستعرض أبرز الفروقات بين النظام القديم والنظام الجديد للسجل التجاري، وأهم التغييرات التي تهم أصحاب الأعمال والمستثمرين.</p>
+                    <h3 class="article-card-title">نقل ملكية السجل التجاري.. خطوات نظامية تضمن انتقال النشاط بسلاسة</h3>
+                    <p class="article-card-excerpt">يُعد نقل ملكية السجل التجاري من الخدمات المهمة التي تتيح انتقال ملكية المؤسسة التجارية من مالك إلى آخر وفق إجراءات نظامية تحفظ حقوق جميع الأطراف...</p>
                     <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
                 </div>
-
-                
             </a>
 
-             <a href="annual-confirmation-commercial-registration-saudi-arabia.html" class="article-card">
-                <div class="article-card-img">
-                    <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">السجل التجاري</span>
-                    <img src="ppaa2.webp" alt="التأكيد السنوي للسجل التجاري في السعودية: ما هو ومتى يجب إجراؤه؟">
-                </div>
-                <div class="article-card-content">
-                    <h3 class="article-card-title">التأكيد السنوي للسجل التجاري في السعودية: ما هو ومتى يجب إجراؤه؟</h3>
-                    <p class="article-card-excerpt">شهد نظام السجل التجاري في المملكة العربية السعودية تطورًا مهمًا مع تطبيق نظام السجل التجاري الجديد، ومن أبرز التغييرات التي جاء بها الانتقال من مفهوم تجديد السجل التجاري إلى مفهوم التأكيد السنوي لبيانات السجل التجاري.
-</p>
-                    <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
-                </div>
-
-                
-            </a>
-
-             <a href="not-completing-annual-confirmation-commercial-registration.html" class="article-card">
-                <div class="article-card-img">
-                    <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">السجل التجاري</span>
-                    <img src="pppaaa111.webp" alt="ماذا يحدث عند عدم إجراء التأكيد السنوي للسجل التجاري؟ المدد والآثار النظامية">
-                </div>
-                <div class="article-card-content">
-                    <h3 class="article-card-title">ماذا يحدث عند عدم إجراء التأكيد السنوي للسجل التجاري؟ المدد والآثار النظامية</h3>
-                    <p class="article-card-excerpt">في هذا المقال نستعرض مفهوم التأكيد السنوي، وأهمية الالتزام به، والآثار التي قد تترتب على عدم اتخاذ الإجراء خلال المدد المحددة، مع توضيح عدد من النقاط العملية المهمة لأصحاب المنشآت.</p>
-                    <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
-                </div>
-
-                
-            </a>
-
-
-            <a href="new-companies-law-saudi-arabia.html" class="article-card">
-                <div class="article-card-img">
-                    <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">الأنظمة التجارية</span>
-                    <img src="bbaa1.webp" alt="ما هو نظام الشركات الجديد في المملكة العربية السعودية؟">
-                </div>
-                <div class="article-card-content">
-                    <h3 class="article-card-title">ما هو نظام الشركات الجديد في المملكة العربية السعودية؟</h3>
-                    <p class="article-card-excerpt">شهدت المملكة العربية السعودية تطورًا ملحوظًا في البيئة التشريعية والتنظيمية لقطاع الأعمال، ويأتي نظام الشركات الجديد كأحد أبرز الأنظمة التي أسهمت في...</p>
-                    <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
-                </div>
-
-                
-            </a>
-
-             <a href="differences-old-new-companies-law-saudi-arabia.html" class="article-card">
-                <div class="article-card-img">
-                    <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">الأنظمة التجارية</span>
-                    <img src="pppab.webp" alt="أبرز الفروقات بين نظام الشركات القديم ونظام الشركات الجديد في المملكة العربية السعودية">
-                </div>
-                <div class="article-card-content">
-                    <h3 class="article-card-title">أبرز الفروقات بين نظام الشركات القديم ونظام الشركات الجديد في المملكة العربية السعودية</h3>
-                    <p class="article-card-excerpt">في هذا المقال نستعرض أبرز الفروقات بين نظام الشركات السابق ونظام الشركات الجديد بصورة مبسطة.</p>
-                    <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
-                </div>
-
-                
-            </a>
-
-
-            <a href="commercial-names-law-saudi-arabia.html" class="article-card">
-                <div class="article-card-img">
-                    <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">الاسم التجاري</span>
-                    <img src="pbpb.webp" alt="الاسم التجاري في المملكة العربية السعودية: شروطه وضوابطه وقيده في السجل التجاري">
-                </div>
-                <div class="article-card-content">
-                    <h3 class="article-card-title">الاسم التجاري في المملكة العربية السعودية: شروطه وضوابطه وقيده في السجل التجاري</h3>
-                    <p class="article-card-excerpt">يُعد الاسم التجاري من أهم العناصر التي تميز المنشأة في السوق، فهو ليس مجرد اسم يُختار عند بدء النشاط، بل يمثل هوية تجارية ترتبط بالتاجر والمنشأة وتظهر في السجل التجاري والتعاملات التجارية.</p>
-                    <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
-                </div>
-
-                
-            </a>
-
-
-            <a href="limited-liability-companies-saudi-arabia.html" class="article-card">
-                <div class="article-card-img">
-                    <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">الأنظمة التجارية</span>
-                    <img src="ppa2.webp" alt="الشركات ذات المسؤولية المحدودة في المملكة العربية السعودية">
-                </div>
-                <div class="article-card-content">
-                    <h3 class="article-card-title">الشركات ذات المسؤولية المحدودة في المملكة العربية السعودية</h3>
-                    <p class="article-card-excerpt">تُعد الشركة ذات المسؤولية المحدودة من أكثر أشكال الشركات انتشارًا في المملكة العربية السعودية، وقد نظمها نظام الشركات السعودي بمايحقق التوازن بين...</p>
-                    <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
-                </div>
-
-                
-            </a>
-
-
-            <a href="joint-stock-companies-saudi-arabia.html" class="article-card">
-                <div class="article-card-img">
-                    <span class="article-badge" style="width: fit-content; margin-bottom: 15px;">الأنظمة التجارية</span>
-                    <img src="pa2.webp" alt="الشركات المساهمة في المملكة العربية السعودية">
-                </div>
-                <div class="article-card-content">
-                    <h3 class="article-card-title">الشركات المساهمة في المملكة العربية السعودية</h3>
-                    <p class="article-card-excerpt">تُعد الشركة المساهمة من أبرز أشكال الشركات التي نظمها نظام الشركات السعودي، وتتميز بقدرتها على استقطاب رؤوس الأموال وتنظيم الملكية من...</p>
-                    <span class="read-more">اقرأ المقال <i class="fa-solid fa-arrow-left"></i></span>
-                </div>
-
-                
-            </a>
-
+            <!-- يمكنك إضافة المزيد من المقالات هنا مستقبلاً لتمتلئ الصفحة 2 -->
+            
         </div>
 
-        <!-- التنقل بين الصفحات -->
-        <!-- التنقل بين الصفحات -->
+        <!-- التنقل بين الصفحات (معدل للصفحة 2) -->
         <div class="pagination">
-            <a href="article.html" class="page-num active">1</a>
-            <a href="article2.html" class="page-num">2</a>
+            <!-- زر السابق (يرجعك للصفحة الأولى) -->
+            <a href="article.html" class="nav-btn"><i class="fa-solid fa-angle-right"></i> السابق</a>
+            
+            <a href="article.html" class="page-num">1</a>
+            
+            <!-- اللون الذهبي (الكلاس active) الآن على رقم 2 -->
+            <a href="article2.html" class="page-num active">2</a>
+            
             <a href="article3.html" class="page-num">3</a>
             <span class="dots">...</span>
             <a href="article12.html" class="page-num">12</a>
             
-            <a href="article2.html" class="nav-btn">التالي <i class="fa-solid fa-angle-left"></i></a>
+            <!-- زر التالي (يأخذك للصفحة 3 مستقبلاً) -->
+            <a href="article3.html" class="nav-btn">التالي <i class="fa-solid fa-angle-left"></i></a>
         </div>
     </main>
 
@@ -496,13 +338,9 @@
         </ul>
     </nav>
 
-
-
-    
-<!-- ================= الفوتر (تذييل الصفحة) ================= -->
+    <!-- ================= الفوتر (تذييل الصفحة) ================= -->
     <footer class="site-footer">
         <div class="container footer-content">
-            
             <!-- قسم التواصل -->
             <div class="footer-info">
                 <h4>تواصل معي</h4>
@@ -511,16 +349,12 @@
                     <i class="fa-regular fa-envelope"></i> mohammedarwysh@gmail.com
                 </a>
             </div>
-
             <!-- قسم إخلاء المسؤولية -->
             <div class="footer-disclaimer">
                 <h4>إخلاء مسؤولية</h4>
                 <p>جميع المقالات، الأدلة، والآراء المطروحة في هذا الموقع تعبر عن رأيي الشخصي واجتهادي الخاص، ولا تمثل أو تعكس بالضرورة سياسات أو توجهات جهة العمل أو أي جهة حكومية أو رسمية أرتبط بها.</p>
             </div>
-
         </div>
-
-        
     </footer>
 </body>
 </html>
