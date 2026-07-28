@@ -3,33 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>الأسئلة الشائعة | محمد يعقوب درويش</title>
-
-
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1MW3D24R2G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1MW3D24R2G');
-</script>
-
-   
-   
+    <title>الأسئلة الشائعة حول السجل التجاري والمؤسسات | محمد يعقوب درويش</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MW3D24R2G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1MW3D24R2G');
+    </script>
+    
+    <!-- ================= إعدادات SEO المتقدمة ================= -->
+    <meta name="description" content="إجابات شاملة لأكثر من 40 سؤالاً حول السجل التجاري والمؤسسات الفردية في السعودية. تعرف على شروط الإصدار، الشطب، وتعديل البيانات مع محمد يعقوب درويش.">
+    <meta name="keywords" content="السجل التجاري, المؤسسة الفردية, شطب السجل التجاري, تحديث السجل التجاري, وزارة التجارة السعودية, أسئلة شائعة السجل التجاري, محمد يعقوب درويش">
+    <meta name="author" content="محمد يعقوب درويش">
     <meta property="og:site_name" content="محمد يعقوب درويش | الموقع الرسمي">
-
-    <meta name="description" content="دليلك الشامل لكل ما يخص الأنظمة التجارية في السعودية. تصفح مقالات وأدلة محمد يعقوب درويش المبسطة حول السجل التجاري، تأسيس الشركات، وتطوير الأعمال.">
+    <meta property="og:title" content="الأسئلة الشائعة حول الأنظمة التجارية السعودية">
+    <meta property="og:description" content="مرجعك السريع لكل ما يخص السجل التجاري والمؤسسات الفردية.">
+    <meta property="og:url" content="https://mohammeddarwish1.github.io/MohammedDarwish/faq.html">
     <link rel="icon" type="image/png" href="profile2.webp">
-
+    
+    <!-- Schema Markup for FAQ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "محمد يعقوب درويش",
-      "alternateName": "Mohammed Darwish",
-      "url": "https://mohammeddarwish1.github.io/MohammedDarwish/"
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما هو السجل التجاري؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "السجل التجاري هو سجل رسمي يثبت ممارسة النشاط التجاري بصورة نظامية، ويتضمن بيانات المنشأة الأساسية."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما هي المؤسسة الفردية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "المؤسسة الفردية هي منشأة تجارية يملكها شخص طبيعي واحد، ويكون مسؤولًا عن إدارتها والتزاماتها."
+          }
+        }
+      ]
     }
     </script>
     
@@ -40,7 +57,7 @@
     
     <!-- مكتبة الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
         /* ================= المتغيرات والألوان ================= */
         :root {
@@ -56,197 +73,74 @@
             --radius: 16px;
             --transition: 0.3s ease;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            overflow-x: hidden;
-            position: relative;
-        }
-
+        body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; position: relative; }
+        
         /* --- خلفية الموقع (ثابتة ومتلاشية) --- */
-        body::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 90vh; 
-            z-index: -2; background-image: url('city.webp'); background-size: cover; background-position: center top;
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
-        }
-        body::after {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 90vh; z-index: -1;
-            background: linear-gradient(to bottom, rgba(2, 11, 22, 0.3) 0%, var(--bg-color) 100%);
-        }
-
+        body::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 90vh; z-index: -2; background-image: url('city.webp'); background-size: cover; background-position: center top; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); }
+        body::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 90vh; z-index: -1; background: linear-gradient(to bottom, rgba(2, 11, 22, 0.3) 0%, var(--bg-color) 100%); }
+        
         .container { max-width: 1400px; margin: 0 auto; padding: 0 4%; }
         a { text-decoration: none; color: inherit; }
-
+        
         /* ================= القائمة العلوية ================= */
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 25px 4%; position: relative; z-index: 1000;
-        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 25px 4%; position: relative; z-index: 1000; }
         .logo { display: flex; align-items: center; gap: 12px; }
-        .logo-icon {
-            font-size: 2.5rem; font-weight: 900;
-            background: linear-gradient(135deg, #fff 0%, #6fb6ad 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2px;
-        }
+        .logo-icon { font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #fff 0%, #6fb6ad 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2px; }
         .logo-text h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: -3px; }
         .logo-text p { font-size: 0.65rem; color: var(--gold); letter-spacing: 1px; }
-
         .nav-links { display: flex; gap: 30px; }
         .nav-links a { font-size: 1.05rem; font-weight: 500; transition: var(--transition); position: relative; }
         .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-        .nav-links a.active::after {
-            content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--gold);
-        }
-
+        .nav-links a.active::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--gold); }
         .header-actions { display: flex; align-items: center; gap: 20px; }
-        .btn-green {
-            background: var(--green); color: var(--text-main);
-            padding: 10px 24px; border-radius: 8px; font-weight: 500;
-            display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.05);
-            transition: var(--transition); cursor: pointer;
-        }
+        .btn-green { background: var(--green); color: var(--text-main); padding: 10px 24px; border-radius: 8px; font-weight: 500; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); cursor: pointer; }
         .btn-green:hover { background: var(--green-hover); }
-
-        /* ================= تصميم الأسئلة الشائعة (FAQ Accordion) ================= */
+        
+        /* ================= تصميم الأسئلة الشائعة ================= */
         .page-header { text-align: center; margin: 40px 0 60px; position: relative; z-index: 5; }
         .page-header h1 { font-size: 3rem; font-weight: 900; color: var(--text-main); margin-bottom: 15px; }
         .page-header p { font-size: 1.2rem; color: var(--text-muted); }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto 80px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            position: relative; z-index: 5;
-        }
-
-        .faq-item {
-            background: var(--glass-bg); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border); border-radius: var(--radius);
-            overflow: hidden;
-            transition: var(--transition);
-        }
+        
+        .faq-container { max-width: 900px; margin: 0 auto 30px; display: flex; flex-direction: column; gap: 15px; position: relative; z-index: 5; }
+        .faq-item { background: var(--glass-bg); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid var(--glass-border); border-radius: var(--radius); overflow: hidden; transition: var(--transition); }
         .faq-item.active { border-color: rgba(229, 184, 66, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-
-        .faq-question {
-            padding: 22px 25px; display: flex; justify-content: space-between; align-items: center;
-            cursor: pointer; font-size: 1.15rem; font-weight: 700; color: var(--text-main);
-            transition: var(--transition); user-select: none;
-        }
+        .faq-question { padding: 22px 25px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1.15rem; font-weight: 700; color: var(--text-main); transition: var(--transition); user-select: none; }
         .faq-question:hover { color: var(--gold); }
         .faq-question i { color: var(--gold); font-size: 1.2rem; transition: transform 0.4s ease; }
-        
         .faq-item.active .faq-question i { transform: rotate(180deg); }
-
-        .faq-answer {
-            max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
-        }
-        .faq-answer-content {
-            padding: 0 25px 25px; color: var(--text-muted); line-height: 1.8; font-size: 1rem;
-            border-top: 1px dashed rgba(255,255,255,0.05); margin-top: 5px; padding-top: 20px;
-        }
-
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer-content { padding: 0 25px 25px; color: var(--text-muted); line-height: 1.8; font-size: 1rem; border-top: 1px dashed rgba(255,255,255,0.05); margin-top: 5px; padding-top: 20px; }
+        
+        /* ================= زر تحميل المزيد ================= */
+        .load-more-container { text-align: center; margin-bottom: 80px; position: relative; z-index: 5; }
+        .load-more-btn { background: transparent; color: var(--gold); border: 2px solid var(--gold); padding: 12px 30px; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; }
+        .load-more-btn:hover { background: var(--gold); color: var(--bg-color); }
+        .hidden-faq { display: none; }
+        
         /* ================= الشريط السفلي للجوال ================= */
-        .mobile-bottom-nav {
-            display: none; position: fixed; bottom: 0; width: 100%;
-            background: rgba(4, 15, 33, 0.95); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border);
-            z-index: 2000; padding: 12px 0; padding-bottom: calc(12px + env(safe-area-inset-bottom));
-        }
+        .mobile-bottom-nav { display: none; position: fixed; bottom: 0; width: 100%; background: rgba(4, 15, 33, 0.95); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); z-index: 2000; padding: 12px 0; padding-bottom: calc(12px + env(safe-area-inset-bottom)); }
         .mobile-bottom-nav ul { display: flex; justify-content: space-around; list-style: none; direction: ltr; padding: 0; }
         .mobile-bottom-nav a { display: flex; flex-direction: column; align-items: center; color: var(--text-muted); font-size: 0.75rem; gap: 6px; font-weight: 500; }
         .mobile-bottom-nav a.active { color: var(--gold); }
         .mobile-bottom-nav a i { font-size: 1.3rem; }
-
+        
         /* ================= التجاوب مع الجوال ================= */
-        @media (max-width: 992px) {
-            header .nav-links, header .btn-green { display: none; }
-            .mobile-bottom-nav { display: block; }
-            .page-header h1 { font-size: 2.5rem; }
-            .faq-question { font-size: 1.05rem; padding: 18px 20px; }
-            .faq-answer-content { padding: 0 20px 20px; font-size: 0.95rem; }
-        }
-
+        @media (max-width: 992px) { header .nav-links, header .btn-green { display: none; } .mobile-bottom-nav { display: block; } .page-header h1 { font-size: 2.5rem; } .faq-question { font-size: 1.05rem; padding: 18px 20px; } .faq-answer-content { padding: 0 20px 20px; font-size: 0.95rem; } }
+        
         /* ================= الفوتر (تذييل الصفحة) ================= */
-.site-footer {
-    background: rgba(4, 15, 33, 0.8);
-    border-top: 1px solid var(--glass-border);
-    padding: 50px 0 20px;
-    margin-top: 60px;
-    position: relative;
-    z-index: 10;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 30px;
-}
-
-.footer-info, .footer-disclaimer {
-    flex: 1;
-}
-
-.site-footer h4 {
-    color: var(--gold);
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.site-footer p {
-    color: var(--text-muted);
-    line-height: 1.7;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-}
-
-.footer-email {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 10px 20px;
-    border-radius: 8px;
-    color: var(--text-main);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
-    direction: ltr;
-}
-
-.footer-email:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-}
-
-.footer-bottom {
-    text-align: center;
-    border-top: 1px dashed rgba(255, 255, 255, 0.05);
-    padding-top: 20px;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 0.85rem;
-}
-
-/* تجاوب الفوتر مع الجوال */
-@media (max-width: 992px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-    .site-footer {
-        padding-bottom: 90px; /* لترك مساحة للشريط السفلي الثابت في الجوال */
-    }
-}
+        .site-footer { background: rgba(4, 15, 33, 0.8); border-top: 1px solid var(--glass-border); padding: 50px 0 20px; margin-top: 60px; position: relative; z-index: 10; }
+        .footer-content { display: flex; justify-content: space-between; gap: 40px; margin-bottom: 30px; }
+        .footer-info, .footer-disclaimer { flex: 1; }
+        .site-footer h4 { color: var(--gold); font-size: 1.2rem; margin-bottom: 15px; }
+        .site-footer p { color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; margin-bottom: 15px; }
+        .footer-email { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.05); padding: 10px 20px; border-radius: 8px; color: var(--text-main); border: 1px solid rgba(255, 255, 255, 0.1); transition: var(--transition); direction: ltr; }
+        .footer-email:hover { border-color: var(--gold); color: var(--gold); }
+        .footer-bottom { text-align: center; border-top: 1px dashed rgba(255, 255, 255, 0.05); padding-top: 20px; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
+        @media (max-width: 992px) { .footer-content { flex-direction: column; gap: 30px; text-align: center; } .site-footer { padding-bottom: 90px; } }
     </style>
 </head>
 <body>
-
-    <!-- القائمة العلوية -->
     <header class="container">
         <a href="index.html" class="logo">
             <div class="logo-icon">MD</div>
@@ -255,7 +149,6 @@
                 <p>MOHAMMED DARWISH</p>
             </div>
         </a>
-
         <nav class="nav-links">
             <a href="index.html">الرئيسية</a>
             <a href="article.html">المقالات</a>
@@ -263,156 +156,508 @@
             <a href="guides.html">الأدلة</a>
             <a href="faq.html" class="active">الأسئلة الشائعة</a>
         </nav>
-
         <div class="header-actions">
-            <!-- زر التواصل الأخضر كما طلبت -->
             <a href="contact.html" class="btn-green"><i class="fa-regular fa-user"></i> تواصل معي</a>
         </div>
     </header>
 
-    <!-- محتوى الأسئلة الشائعة -->
     <main class="container">
         <div class="page-header">
             <h1>الأسئلة الشائعة</h1>
-            <p>إجابات سريعة لأكثر الاستفسارات شيوعاً حول الخدمات والإجراءات</p>
+            <p>دليلك الشامل لجميع استفسارات السجل التجاري والمؤسسات الفردية</p>
         </div>
 
-        <div class="faq-container">
+        <div class="faq-container" id="faqContainer">
             
             <!-- السؤال 1 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال الأول الخاص بك؟</span>
+                    <span>ما هو السجل التجاري؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        السجل التجاري هو سجل رسمي يثبت ممارسة النشاط التجاري بصورة نظامية، ويتضمن بيانات المنشأة مثل الاسم التجاري، ورقم السجل، والنشاط، والعنوان، وغيرها من البيانات الأساسية.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 2 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال الثاني الخاص بك؟</span>
+                    <span>من الملزم بإصدار سجل تجاري؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        كل من يزاول نشاطًا تجاريًا يتطلبه النظام يجب عليه إصدار سجل تجاري وفقًا للأنظمة واللوائح المعمول بها.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 3 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال الثالث الخاص بك؟</span>
+                    <span>ما أهمية السجل التجاري؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        يساعد السجل التجاري على إثبات الصفة النظامية للنشاط التجاري، كما يتيح الاستفادة من العديد من الخدمات الحكومية والمالية والتعاقدية.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 4 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال الرابع الخاص بك؟</span>
+                    <span>هل يمكن إصدار أكثر من سجل تجاري للشخص نفسه؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        يجوز ذلك إذا كان مستوفيًا للمتطلبات النظامية، وذلك بحسب طبيعة الأنشطة والأحكام المنظمة لها.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 5 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال الخامس الخاص بك؟</span>
+                    <span>هل يمكن تعديل بيانات السجل التجاري؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        نعم، يمكن تعديل بيانات السجل التجاري مثل الاسم التجاري أو النشاط أو العنوان أو بيانات التواصل وغيرها من خلال الخدمات الإلكترونية.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 6 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال السادس الخاص بك؟</span>
+                    <span>متى يجب تحديث بيانات السجل التجاري؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        عند حدوث أي تغيير في البيانات الأساسية للمنشأة، لضمان توافق السجل مع الوضع الفعلي للنشاط.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 7 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال السابع الخاص بك؟</span>
+                    <span>متى يتم شطب السجل التجاري؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        يتم شطب السجل عند انتهاء النشاط التجاري ورغبة صاحبه في إنهائه، بعد استكمال الإجراءات النظامية والتأكد من استيفاء المتطلبات ذات العلاقة.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 8 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال الثامن الخاص بك؟</span>
+                    <span>هل يؤدي شطب السجل التجاري إلى إنهاء جميع الالتزامات؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        شطب السجل التجاري لا يعفي من أي حقوق أو التزامات قائمة قبل الشطب، وتبقى المسؤوليات خاضعة للأنظمة ذات العلاقة.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 9 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال التاسع الخاص بك؟</span>
+                    <span>هل يمكن إعادة إصدار سجل تجاري بعد شطبه؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        يمكن ذلك إذا توفرت الشروط النظامية اللازمة، مع استكمال الإجراءات المطلوبة.
                     </div>
                 </div>
             </div>
-
             <!-- السؤال 10 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>اكتب هنا عنوان السؤال العاشر الخاص بك؟</span>
+                    <span>ما الفرق بين السجل التجاري والاسم التجاري؟</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة. يمكنك كتابة إجابة تفصيلية هنا لتوضيح الفكرة للزوار بطريقة احترافية ومباشرة.
+                        السجل التجاري هو القيد الرسمي للمنشأة، أما الاسم التجاري فهو الاسم الذي تمارس المنشأة نشاطها من خلاله.
                     </div>
                 </div>
             </div>
+            <!-- السؤال 11 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل يشترط وجود عنوان للمنشأة؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يجب تسجيل عنوان صحيح ومحدث للمنشأة وفقًا للمتطلبات النظامية.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 12 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل يمكن نقل ملكية السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        في بعض الحالات يمكن نقل الملكية وفقًا للإجراءات والضوابط النظامية المقررة.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 13 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ما البيانات التي تظهر في السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        تشمل عادة رقم السجل، والاسم التجاري، ونوع الكيان، والأنشطة، والعنوان، وتاريخ الإصدار، وتاريخ الانتهاء، وغيرها من البيانات النظامية.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 14 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ماذا يحدث عند عدم تحديث بيانات السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        قد يؤدي عدم تحديث البيانات إلى صعوبات في الاستفادة من الخدمات الحكومية أو إلى مخالفات وفقًا للأنظمة المعمول بها.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 15 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل يمكن ممارسة أكثر من نشاط في سجل تجاري واحد؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن إضافة أكثر من نشاط إذا كانت الأنظمة تسمح بذلك، مع مراعاة الاشتراطات الخاصة بكل نشاط.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 16 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>كيف يمكن الاستعلام عن بيانات السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        يمكن الاستعلام عن بيانات السجل التجاري من خلال الخدمات الإلكترونية الرسمية المخصصة لذلك.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 17 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ما النصائح قبل إصدار السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        من أهم النصائح:<br>• اختيار النشاط المناسب بدقة.<br>• التأكد من توفر الاسم التجاري إذا كان مطلوبًا.<br>• مراجعة الاشتراطات الخاصة بالنشاط.<br>• تسجيل بيانات صحيحة ومحدثة.<br>• متابعة أي التزامات نظامية بعد إصدار السجل.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 18 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل يمكن تغيير الاسم التجاري بعد إصدار السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن تغيير الاسم التجاري وفقًا للإجراءات النظامية، بعد التأكد من توفر الاسم الجديد واستيفاء المتطلبات اللازمة.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 19 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل يؤثر تغيير عنوان المنشأة على السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، عند تغيير عنوان المنشأة يجب تحديث بيانات السجل التجاري لضمان صحة البيانات واستمرار الاستفادة من الخدمات الحكومية.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 20 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل يمكن شطب السجل التجاري إلكترونيًا؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن تقديم طلب شطب السجل التجاري إلكترونيًا عبر القنوات الرسمية، وذلك بعد استيفاء الشروط والمتطلبات النظامية
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 21 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>ما هي المؤسسة الفردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        المؤسسة الفردية هي منشأة تجارية يملكها شخص طبيعي واحد، ويكون مسؤولًا عن إدارتها والتزاماتها وفقًا للأنظمة المعمول بها.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 22 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>من يملك المؤسسة الفردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        يملك المؤسسة الفردية شخص واحد فقط، ولا يوجد فيها شركاء.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 23 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل تتمتع المؤسسة الفردية بشخصية اعتبارية مستقلة؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        تخضع المؤسسة الفردية للأحكام النظامية المنظمة لها، ويظل مالكها هو المسؤول عن التزاماتها وفقًا للأنظمة ذات العلاقة.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 24 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن للمؤسسة الفردية ممارسة أكثر من نشاط؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، إذا كانت الأنشطة متوافقة مع الأنظمة، وتم تسجيلها وفق الإجراءات المعتمدة.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 25 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن تغيير نشاط المؤسسة الفردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن تعديل أو إضافة أو حذف الأنشطة من خلال الخدمات الإلكترونية بعد استيفاء المتطلبات النظامية.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 26 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن تغيير اسم المؤسسة الفردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن تغيير الاسم التجاري للمؤسسة وفقًا للإجراءات النظامية، بعد التأكد من توفر الاسم الجديد.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 27 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن نقل ملكية المؤسسة الفردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        يمكن نقل ملكية المؤسسة في الحالات التي يجيزها النظام، مع استكمال الإجراءات والمتطلبات النظامية.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 28 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن تحويل المؤسسة الفردية إلى شركة؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن تحويل المؤسسة الفردية إلى شركة بعد استيفاء الشروط والإجراءات النظامية.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 29 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يشترط وجود مقر للمؤسسة الفردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يجب تسجيل عنوان نظامي للمؤسسة وفق المتطلبات المعمول بها.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 30 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن فتح فروع للمؤسسة الفردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن إنشاء فروع للمؤسسة وفقًا للإجراءات والضوابط النظامية.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 31 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن شطب المؤسسة الفردية إلكترونيًا؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن تقديم طلب شطب المؤسسة إلكترونيًا بعد استيفاء المتطلبات النظامية.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 32 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن إعادة فتح المؤسسة بعد شطبها؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        يمكن إصدار سجل جديد أو إعادة النشاط إذا توفرت الشروط النظامية اللازمة.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 33 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>ما الفرق بين المؤسسة الفردية والشركة ذات المسؤولية المحدودة؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        المؤسسة الفردية يملكها شخص واحد ويتحمل مسؤولية التزاماتها وفق الأنظمة، بينما الشركة ذات المسؤولية المحدودة تعد من الشركات المنظمة بنظام الشركات، وتكون مسؤولية الشركاء فيها محدودة بقدر حصصهم.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 34 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن تعيين مدير للمؤسسة غير مالكها؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن لمالك المؤسسة تفويض أو تعيين من يدير أعمالها وفق الإجراءات النظامية المعتمدة.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 35 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يجوز تغيير عنوان المؤسسة؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، ويجب تحديث بيانات السجل التجاري عند تغيير عنوان المؤسسة.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 36 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن إضافة أنشطة جديدة للمؤسسة؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، بشرط توافق الأنشطة مع الأنظمة واستكمال إجراءات التعديل.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 37 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يؤثر تغيير اسم المؤسسة على رقم السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        تغيير الاسم التجاري لا يعني بالضرورة تغيير رقم السجل التجاري، ويكون ذلك وفق الإجراءات والأنظمة المعمول بها.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 38 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>متى يجب شطب المؤسسة الفردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        عند التوقف النهائي عن ممارسة النشاط التجاري، وبعد استكمال جميع الإجراءات النظامية المطلوبة.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 39 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>ما أهم النصائح قبل إنشاء مؤسسة فردية؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        من أهم النصائح:<br>• اختيار النشاط المناسب.<br>• اختيار اسم تجاري مناسب.<br>• التأكد من الاشتراطات والتراخيص الخاصة بالنشاط.<br>• تسجيل بيانات صحيحة ومحدثة.<br>• الالتزام بالأنظمة واللوائح المنظمة لممارسة النشاط التجاري.
+                    </div>
+                </div>
+            </div>
+            <!-- السؤال 40 -->
+            <div style="display: none;" class="faq-item hidden-faq">
+                <div class="faq-question">
+                    <span>هل يمكن تعديل بيانات المؤسسة الفردية بعد إصدار السجل التجاري؟</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        نعم، يمكن تعديل بيانات المؤسسة مثل الاسم التجاري أو الأنشطة أو العنوان أو بيانات التواصل من خلال الخدمات الإلكترونية، مع استيفاء المتطلبات النظامية
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="load-more-container" id="loadMoreContainer">
+            <button class="load-more-btn" id="loadMoreBtn">
+                قراءة المزيد <i class="fa-solid fa-angles-down"></i>
+            </button>
         </div>
     </main>
 
-    <!-- الشريط السفلي للجوال -->
     <nav class="mobile-bottom-nav">
         <ul style="direction: ltr; padding: 0;">
             <li><a href="faq.html" class="active"><i class="fa-regular fa-circle-question"></i>الأسئلة الشائعة</a></li>
@@ -423,25 +668,22 @@
         </ul>
     </nav>
 
-    <!-- سكريبت تشغيل حركة انزلاق الأسئلة -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // منطق فتح وإغلاق الأسئلة
             const faqQuestions = document.querySelectorAll('.faq-question');
-            
             faqQuestions.forEach(question => {
                 question.addEventListener('click', () => {
                     const faqItem = question.parentElement;
                     const faqAnswer = question.nextElementSibling;
                     
-                    // إغلاق أي سؤال آخر مفتوح (حركة اختيارية ولكنها الأفضل احترافياً)
                     document.querySelectorAll('.faq-item').forEach(item => {
                         if (item !== faqItem) {
                             item.classList.remove('active');
                             item.querySelector('.faq-answer').style.maxHeight = null;
                         }
                     });
-
-                    // فتح أو إغلاق السؤال الحالي
+                    
                     faqItem.classList.toggle('active');
                     if (faqItem.classList.contains('active')) {
                         faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
@@ -450,15 +692,34 @@
                     }
                 });
             });
+
+            // منطق زر تحميل المزيد
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const hiddenFaqs = document.querySelectorAll('.hidden-faq');
+            
+            if (hiddenFaqs.length === 0) {
+                document.getElementById('loadMoreContainer').style.display = 'none';
+            }
+
+            loadMoreBtn.addEventListener('click', function() {
+                hiddenFaqs.forEach(faq => {
+                    faq.style.display = 'block';
+                    // إضافة تأثير بسيط للظهور
+                    faq.style.opacity = '0';
+                    setTimeout(() => {
+                        faq.style.transition = 'opacity 0.5s ease';
+                        faq.style.opacity = '1';
+                    }, 50);
+                });
+                
+                // إخفاء زر تحميل المزيد بعد عرض كل الأسئلة
+                document.getElementById('loadMoreContainer').style.display = 'none';
+            });
         });
     </script>
 
-    
-<!-- ================= الفوتر (تذييل الصفحة) ================= -->
     <footer class="site-footer">
         <div class="container footer-content">
-            
-            <!-- قسم التواصل -->
             <div class="footer-info">
                 <h4>تواصل معي</h4>
                 <p>يسعدني تواصلك عبر البريد الإلكتروني لأي استفسارات أو لتبادل الخبرات المهنية:</p>
@@ -466,17 +727,11 @@
                     <i class="fa-regular fa-envelope"></i> mohammedarwysh@gmail.com
                 </a>
             </div>
-
-            <!-- قسم إخلاء المسؤولية -->
             <div class="footer-disclaimer">
                 <h4>إخلاء مسؤولية</h4>
                 <p>جميع المقالات، الأدلة، والآراء المطروحة في هذا الموقع تعبر عن رأيي الشخصي واجتهادي الخاص، ولا تمثل أو تعكس بالضرورة سياسات أو توجهات جهة العمل أو أي جهة حكومية أو رسمية أرتبط بها.</p>
             </div>
-
         </div>
-
-        
     </footer>
-
 </body>
 </html>
